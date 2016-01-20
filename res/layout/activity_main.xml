@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="audiorecord.MainActivity" >
+
+   <TextView
+       android:id="@+id/status"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"/> 
+   <CheckBox 
+     android:id="@+id/offline"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:checked="false"
+     android:text="离线解码"
+     ></CheckBox>
+   <Spinner 
+       android:id="@+id/srcIn"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       />
+    <Spinner 
+       android:id="@+id/dataOut"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       />
+   <Button   
+        android:id="@+id/startRecord"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+      />  
+    <Button   
+        android:id="@+id/stopRecord"  
+        android:layout_width="fill_parent"  
+        android:layout_height="wrap_content"  
+      />
+      <TextView 
+       android:id="@+id/intro"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+          />  
+
+</LinearLayout>
