@@ -1,49 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="@drawable/desk"
     tools:context="audiorecord.MainActivity" >
-
+   <TextView 
+       android:id = "@+id/hint"
+       android:layout_width = "wrap_content"
+       android:layout_height = "wrap_content"
+       android:layout_alignParentTop="true"
+       android:textColor="#ffffff"
+       android:textSize="15sp"
+       />
    <TextView
-       android:id="@+id/status"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:textSize="20sp"/> 
-   <CheckBox 
-     android:id="@+id/offline"
-     android:layout_width="wrap_content" 
-     android:layout_height="wrap_content"
-     android:checked="false"
-     android:text="离线解码"
-     ></CheckBox>
-   <Spinner 
-       android:id="@+id/srcIn"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:textSize="20sp"
-       />
-    <Spinner 
-       android:id="@+id/dataOut"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:textSize="20sp"
-       />
-   <Button   
-        android:id="@+id/startRecord"  
-        android:layout_width="fill_parent"  
-        android:layout_height="wrap_content"  
-      />  
-    <Button   
-        android:id="@+id/stopRecord"  
-        android:layout_width="fill_parent"  
-        android:layout_height="wrap_content"  
-      />
-      <TextView 
-       android:id="@+id/intro"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:textSize="20sp"
-          />  
+      android:id="@+id/intro"
+      android:layout_width="250dp"
+      android:layout_height="280dp"
+      android:layout_marginTop="55dp"
+      android:layout_centerHorizontal="true"
+      android:textColor="#ffffff"
+      android:textSize="20sp" />
+   
+  <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+ 	android:layout_alignParentBottom ="true"
+    android:layout_marginBottom="36dp"
+    >
+	  <ImageButton 
+	      android:id="@+id/start"
+	      android:layout_width="60dp"
+	      android:layout_height="60dp"
+	      android:background="@drawable/startbutton"
+	      android:layout_centerHorizontal="true"
+	      />
+	   <ImageButton 
+	      android:id="@+id/menu"
+	      android:layout_width="30dp"
+	      android:layout_height="30dp"
+	      android:background="@drawable/menu"
+	      android:layout_centerVertical="true"
+	      android:layout_marginLeft="20dp"
+	      android:layout_toRightOf = "@id/start"
+	      />
+ </RelativeLayout>
 
-</LinearLayout>
+
+
+</RelativeLayout>

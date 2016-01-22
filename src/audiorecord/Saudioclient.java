@@ -48,25 +48,29 @@ public class Saudioclient extends Thread {
     	m_in_rec = new AudioRecord(audioSource, sampleRateInHz, channelConfig, audioFormat, bufferSizeInBytes);
     	
     }
-    public void startRecord(boolean[] selected, boolean checked)
+    public void startRecord(int func)
     {  
     	m_in_rec.startRecording();   
 	    share = new SharedData(mHandler);
-	    if(checked)
+	    if(func == 1)//本地离线解码
 	    {
 	    	double[] data = CustomStream.readRawDataAndTrans2Double(RAWAUDIONAME);
 	    	new Thread(new AudioProcess(data, share)).start();
 	    }
-	    else
+	    else if(func == 2)//本地实时解码
 	    {
-		    if(selected[0])//读取音频文件
-		    	new Thread(new AudioRead()).start();
-		    if(selected[1])//录音
-		    	new Thread(new AudioRecordThread()).start();  
-		    if(selected[2])//写入文件
-		    	new Thread(new WriteToFile()).start();
-		    if(selected[3])//实时解码    	
-		    	new Thread(new DataExtractionLine(share)).start();
+	    	new Thread(new AudioRead()).start();
+	    	new Thread(new DataExtractionLine(share)).start();
+	    }
+	    else if(func == 3)//录音实时解码
+	    {
+	    	new Thread(new AudioRecordThread()).start();  
+	    	new Thread(new DataExtractionLine(share)).start();
+	    }
+	    else //录音写入文件
+	    {
+	    	new Thread(new AudioRecordThread()).start(); 
+	    	new Thread(new WriteToFile()).start();
 	    }
     }
   
