@@ -1,4 +1,4 @@
-package audiorecord;
+package DecodeThread;
 
 import io.CustomStream;
 
@@ -10,7 +10,6 @@ import mathTools.Complex;
 import mathTools.Status;
 import mathTools._math;
 import mathTools.Mfft;
-import DecodeThread.SharedData;
 import android.app.Activity;
 import android.os.Environment;
 import android.util.Log;

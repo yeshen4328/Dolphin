@@ -1,4 +1,4 @@
-package audiorecord;
+package audiorecordUI;
 import io.CustomStream;
 
 import java.io.BufferedInputStream;
@@ -13,6 +13,7 @@ import java.io.IOException;
 import mathTools.Complex;
 import mathTools.Status;
 import mathTools._math;
+import DecodeThread.AudioProcess;
 import DecodeThread.DataExtractionLine;
 import DecodeThread.SharedData;
 import android.media.AudioFormat;

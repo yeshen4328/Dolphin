@@ -3,47 +3,65 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/desk"
-    tools:context="audiorecord.MainActivity" >
+    android:background="@drawable/desk2"
+    tools:context="audiorecordUI.MainActivity" >
    <TextView 
        android:id = "@+id/hint"
        android:layout_width = "wrap_content"
        android:layout_height = "wrap_content"
        android:layout_alignParentTop="true"
        android:textColor="#ffffff"
-       android:textSize="15sp"
+       android:textSize="12sp"
+       android:layout_marginTop="4dp"
+       android:textStyle="italic"
+       android:layout_centerHorizontal="true"
        />
    <TextView
       android:id="@+id/intro"
-      android:layout_width="250dp"
+      android:layout_width="300dp"
       android:layout_height="280dp"
       android:layout_marginTop="55dp"
       android:layout_centerHorizontal="true"
+      android:maxLines = "10"
+	  android:scrollbars = "vertical"
       android:textColor="#ffffff"
-      android:textSize="20sp" />
-   
+      android:textSize="15sp" />
+
   <RelativeLayout 
+    android:id="@+id/bottom"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
  	android:layout_alignParentBottom ="true"
-    android:layout_marginBottom="36dp"
+ 	android:layout_marginBottom="11dp"
     >
-	  <ImageButton 
-	      android:id="@+id/start"
-	      android:layout_width="60dp"
-	      android:layout_height="60dp"
-	      android:background="@drawable/startbutton"
-	      android:layout_centerHorizontal="true"
-	      />
-	   <ImageButton 
+    <FrameLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id = "@+id/waveAndBut">
+          <audiorecordUI.RecordWave 
+		      android:id="@+id/wave"
+		      android:layout_width = "200dp"
+		      android:layout_height = "200dp"     
+		      android:layout_gravity="center"
+     	  />
+		  <audiorecordUI.RecordButton 
+		      android:id="@+id/start"
+		      android:layout_width="60dp"
+		      android:layout_height="60dp"
+		      android:layout_gravity="center"
+		  />
+	 </FrameLayout>
+	 <ImageButton 
 	      android:id="@+id/menu"
 	      android:layout_width="30dp"
 	      android:layout_height="30dp"
 	      android:background="@drawable/menu"
 	      android:layout_centerVertical="true"
 	      android:layout_marginLeft="20dp"
-	      android:layout_toRightOf = "@id/start"
+	      android:layout_toRightOf = "@id/waveAndBut"
 	      />
+	  
  </RelativeLayout>
 
 
