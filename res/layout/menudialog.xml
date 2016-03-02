@@ -21,7 +21,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="本地离线解码"
+            android:text="Local offline decoding"
             android:textColor="#000000"/>          	       
      </FrameLayout>
      
@@ -41,7 +41,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="本地实时解码"
+            android:text="Local real-time decoding"
             android:textColor="#000000"/>  
       	</FrameLayout>
       
@@ -61,7 +61,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="录音实时解码"
+            android:text="Recording and real-time decoding"
             android:textColor="#000000"/>  
       </FrameLayout>
       
@@ -81,7 +81,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="录音写入文件"
+            android:text="Recording and write"
             android:textColor="#000000"/>  
 	 </FrameLayout>
 </LinearLayout>

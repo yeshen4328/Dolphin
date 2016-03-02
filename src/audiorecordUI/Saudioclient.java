@@ -108,6 +108,7 @@ public class Saudioclient extends Thread {
 			
 			while(!share.isEmpty() || !share.isFinish())
 			{
+				
 				short[] data = share.takeRaw();
 				for(int i = 0; i < data.length; i++)
 					try {
