@@ -55,8 +55,11 @@ public class DataExtractionLine implements Runnable
 		double[] step , A, window;
 		Mfft ft = new Mfft(N);
 		Complex[] Y;
+		int counter = 0;
+		long timeSum = 0;
 		while(!share.isEmpty() || !share.isFinish())
 		{
+			
 			if(firstCheck == 0)
 			{
 				decodeArea = share.take();
@@ -68,6 +71,8 @@ public class DataExtractionLine implements Runnable
 				tmpReadData = share.take();
 				resize(decodeArea.length + tmpReadData.length);
 			}
+			//
+			long start = System.currentTimeMillis();
 			step = _math.copyByIndex(decodeArea, leftP, rightP);			
 			Y = ft.fft(step);			
 			A = _math.cAbs(Y);	 
@@ -119,8 +124,14 @@ public class DataExtractionLine implements Runnable
 				firstCheck = 66;
 			}
 			firstCheck++;
+			//
+			long end = System.currentTimeMillis();
+			counter++;
+			timeSum += end - start;
+			Log.i("time","preamble1:" + Long.toString(end - start));
 		}
-		
+		Log.i("time","preamble1_average:" + Float.toString((float)timeSum/(float)counter));
+		long start = System.currentTimeMillis();
 		N = (int) Math.pow(2,_math.nextpow2(preNum));
 		ft = new Mfft(N);
 		peakDis = 100 *  N/ (double)fs;
@@ -146,6 +157,8 @@ public class DataExtractionLine implements Runnable
 		preamble =  30 * (loc - 1) + 4850;
 		double[] tmp = decodeArea.clone();
 		decodeArea = _math.copyByIndex(tmp, preamble - 1, tmp.length - 1);
+		long end = System.currentTimeMillis();
+		Log.i("time","preamble2:" + Long.toString(end - start));
 	} 
 	private void jumpSilence() 
 	{
@@ -179,7 +192,9 @@ public class DataExtractionLine implements Runnable
 		double startPoint = 0;
 		double[] window = new double[(int)PEAKDIS];	  
 		byte[] sins = new byte[Ns * 64];
-		Complex[] tmp;  
+		Complex[] tmp;
+		int counter = 0;
+		long timesum = 0;
 		for(int i = 0; i < Ns; i++)//解每一个symbol
 		{
 			while(decodeArea.length < sigsPerSymbol.length + 441)
@@ -187,6 +202,7 @@ public class DataExtractionLine implements Runnable
 				tmpReadData = share.take();
 				resize(tmpReadData.length + decodeArea.length);
 			}
+			long start = System.currentTimeMillis();
 			startPoint = 201 * PEAKDIS / 2;
 			System.arraycopy(decodeArea, 441, sigsPerSymbol, 0, sigsPerSymbol.length);
 			double[] cpy = decodeArea.clone();
@@ -200,7 +216,7 @@ public class DataExtractionLine implements Runnable
 			A = _math.cAbs(tmp);
 			
 			int[] msg = new int[8];
-			
+				
 			for(int j = 0, countByte = 0, countBit = 0; j < 64; j++)
 			{
 				sig = 0;
@@ -224,13 +240,18 @@ public class DataExtractionLine implements Runnable
 				if(countBit == 8)
 				{	
 					countBit = 0;	
-					int tmpByte = DoubleRadix2Byte(oneByte);							
+					int tmpByte = bin2Byte(oneByte);							
 					msg[countByte++] = tmpByte;
 				}			
 //*********************************************************************************************
 			}
+			long end = System.currentTimeMillis();
+			counter ++;
+			timesum += end - start;
+			Log.i("time","decode a symbol:" + Long.toString(end - start));
 			cali.put(msg);
 		}
+		Log.i("time", "decode a symbol average:"+Float.toString((float)timesum/(float)counter));
 		cali.setFinish(true);
 		cali.put(new int[0]);
 		Log.i("msg", "DataExtactionLine: caliFinish " + Boolean.toString(cali.isFinish()));
@@ -260,7 +281,7 @@ public class DataExtractionLine implements Runnable
 		System.arraycopy(tmpReadData, 0, newArea, oldCapacity, dataCapacity);
 	}
 	
-	private int DoubleRadix2Byte(byte[] d)
+	private int bin2Byte(byte[] d)
 	{
 		int out = 0;
 		for(int i = 0; i < 8; i++)		

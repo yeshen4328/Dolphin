@@ -16,12 +16,16 @@ import mathTools._math;
 import DecodeThread.AudioProcess;
 import DecodeThread.DataExtractionLine;
 import DecodeThread.SharedData;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.Handler;
 import android.util.Log;
+import android.view.SurfaceView;
 
 public class Saudioclient extends Thread {
     protected AudioRecord m_in_rec ; 
@@ -37,7 +41,9 @@ public class Saudioclient extends Thread {
     public short[] audioData;
     public Complex[] data_time;
     SharedData share;
+    OscilloGraph og = null;
     Handler mHandler;
+    SurfaceView sfv = null;
     public Saudioclient(Handler mhandler)
     {
     	this.mHandler = mhandler;
@@ -49,9 +55,11 @@ public class Saudioclient extends Thread {
     	m_in_rec = new AudioRecord(audioSource, sampleRateInHz, channelConfig, audioFormat, bufferSizeInBytes);
     	
     }
-    public void startRecord(int func)
+    public void startRecord(int func, SurfaceView sfv)
     {  
+    	this.sfv = sfv;
     	m_in_rec.startRecording();   
+    	og = new OscilloGraph(sfv);
 	    share = new SharedData(mHandler);
 	    if(func == 1)//本地离线解码
 	    {
@@ -86,6 +94,7 @@ public class Saudioclient extends Thread {
         {  
             System.out.println("stopRecord");  
             share.setFinish(true);
+            og.setFinish(true);
             m_in_rec.stop();  
             m_in_rec.release();
             m_in_rec = null;  
@@ -132,21 +141,28 @@ public class Saudioclient extends Thread {
     public class AudioRecordThread implements Runnable
     {
     	 @Override  
-         public void run() {    
+         public void run() {   
+    		 new Thread(new DisplayWaveFormLine(og)).start();		
              int readsize = 0; 
              short[] dataInShort = null;
-             while (!share.isFinish()) 
+             //DisplayWaveForm dis = new DisplayWaveForm(sfv);
+             while (!share.isFinish())
              {  
                  readsize = m_in_rec.read(audioData, 0, bufferSizeInBytes);  
                  Log.i("TAG",Integer.toString(readsize) + " "+Integer.toString(bufferSizeInBytes));
                  if(readsize > 0)
                  {
                 	dataInShort  = _math.copyByIndex(audioData, 0, readsize - 1);
-                 	share.put(dataInShort); 
+                	og.put(dataInShort); 
+                 	share.put(dataInShort.clone()); 
+                 	//dis.run(dataInShort);
                  }
-             }  
-         }          
+             }        
+         }   
+ 	 
     }
+    
+    
     public class AudioRead implements Runnable
     {
 		@Override

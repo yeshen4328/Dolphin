@@ -19,14 +19,19 @@
    <TextView
       android:id="@+id/intro"
       android:layout_width="300dp"
-      android:layout_height="280dp"
+      android:layout_height="300dp"
       android:layout_marginTop="55dp"
       android:layout_centerHorizontal="true"
       android:maxLines = "10"
 	  android:scrollbars = "vertical"
       android:textColor="#ffffff"
       android:textSize="15sp" />
-
+	<SurfaceView 
+	   android:id="@+id/soundWave"
+	   android:layout_width="fill_parent"
+	   android:layout_height="100dip"
+	   android:layout_below="@id/intro"
+	    />
   <RelativeLayout 
     android:id="@+id/bottom"
     android:layout_width="match_parent"

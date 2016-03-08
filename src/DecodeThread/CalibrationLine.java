@@ -45,7 +45,10 @@ public class CalibrationLine implements Runnable
 			decodeArea = _math.copyByIndex(tmp, NN, tmp.length - 1);
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
+			long start = System.currentTimeMillis();
 			byte[] msg = rs.rsDecode(window);
+			long end = System.currentTimeMillis();
+			Log.i("time","rsDecodeTime:"+Long.toString(end - start)); 
 			display.put(msg);
 		}
 		Log.i("msg","cali finish");

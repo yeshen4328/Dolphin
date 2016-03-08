@@ -16,6 +16,13 @@ public class _math {
 		System.arraycopy(src2, 0, des, src1.length, src2.length);
 		return des;
 	}
+	public static short[] mergeArray(short[] src1, short[] src2)
+	{
+		short[] des = new short[src1.length + src2.length];
+		System.arraycopy(src1, 0, des, 0, src1.length);
+		System.arraycopy(src2, 0, des, src1.length, src2.length);
+		return des;
+	}
 	public static int round(double a)
 	{	
 		int b = 0;
@@ -38,6 +45,14 @@ public class _math {
 	public static double max(double[] a)
 	{
 		double max = a[0];
+		for(int i=0;i<a.length;i++)
+			if(a[i] > max)
+				max = a[i];
+		return max;
+	}
+	public static short max(short[] a)
+	{
+		short max = a[0];
 		for(int i=0;i<a.length;i++)
 			if(a[i] > max)
 				max = a[i];
@@ -71,6 +86,18 @@ public class _math {
 			}
 		return index;
 	}
+	public static int maxLoc(short[] a)
+	{
+		short max = a[0];
+		int index = 0;
+		for(int i=0;i<a.length;i++)
+			if(a[i] > max)
+			{
+				max = a[i];
+				index = i;
+			}
+		return index;
+	}
 	public static double mean(double[] a)
 	{
 		double mean = 0;
@@ -86,7 +113,6 @@ public class _math {
 		while(Math.pow(2,i) < Math.abs(p))i++;
 		return i;
 	}
-	
 	public static double[] cAbs(Complex[] a)
     {
     	double[] result = new double[a.length];
@@ -126,7 +152,6 @@ public class _math {
 			normalized[i] = (double)audiodata[i] / 32768.0;
 		return normalized;
 	}
-
 	public static double sum(double[] a ){
 		double sum = 0;
 		for(double i: a)
@@ -161,7 +186,6 @@ public class _math {
 		System.arraycopy(src, start, copy, 0, copy.length);
 		return copy;
 	}
-	
 	public static byte[] copyByIndex(byte[] src, int start, int end){
 		byte[] copy = new byte[end - start + 1];
 		if (copy.length == 0)
@@ -176,7 +200,6 @@ public class _math {
 		System.arraycopy(src, start, copy, 0, copy.length);
 		return copy;
 	}
-	
 	public static int[] copyByIndex(int[] src, int start, int end){
 		int[] copy = new int[end - start + 1];
 		if (copy.length == 0)
@@ -191,7 +214,6 @@ public class _math {
 		System.arraycopy(src, start, copy, 0, copy.length);
 		return copy;
 	}
-
 	public static double[] sqrArray(double[] a){
 		double[] pow2 = new double[a.length];
 		for(int i = 0; i < a.length; i++)
@@ -201,6 +223,13 @@ public class _math {
 	public static double[][] reshape(double[] src, int row, int col){
 		double[][] metrix = new double[row][col];		
 		return metrix;
+	}
+	public static short avg(short[] d)
+	{
+		float avg = 0;
+		for(int i = 0; i < d.length; i++)
+			avg += (float)d[i];
+		return (short) (avg/(float)d.length);
 	}
 
 }

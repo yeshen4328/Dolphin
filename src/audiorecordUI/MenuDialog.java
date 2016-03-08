@@ -1,21 +1,15 @@
 package audiorecordUI;
 
-import mathTools.Status;
-
 import com.example.audiorecord.R;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.graphics.ColorMatrixColorFilter;
 import android.os.Handler;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 
@@ -29,6 +23,7 @@ public class MenuDialog {
 	private AlertDialog ad;
 	ImageButton ib1, ib2, ib3, ib4; 
 	Handler mHandler = null;
+	FrameLayout f1,f2,f3,f4;
 	public MenuDialog(Context context,short sh,short sw, Handler mHandler) {
 		// TODO Auto-generated constructor stub
 		this.context = context;
@@ -37,9 +32,14 @@ public class MenuDialog {
         ad.show();
         window = ad.getWindow();
         window.setContentView(R.layout.menudialog);
+//        f1 = (FrameLayout) window.findViewById(R.id.franme1);
+//        f2 = (FrameLayout) window.findViewById(R.id.franme2);
+//        f3 = (FrameLayout) window.findViewById(R.id.franme3);
+//        f4 = (FrameLayout) window.findViewById(R.id.franme4);
+        
         LayoutParams p = window.getAttributes();
         p.width = (int)(sw*0.7);
-        p.height = (int)(sh*0.35);     
+        p.height = (int)(sh*0.4);     
         window.setAttributes(p);  
         setButton();
 	}

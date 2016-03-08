@@ -6,6 +6,7 @@ import com.example.audiorecord.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -13,6 +14,7 @@ import android.os.Message;
 import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
@@ -33,6 +35,7 @@ public class MainActivity extends Activity {
     boolean startClicked = false;
     boolean firsttxt = true;
     short sh, sw;
+    SurfaceView sfv = null;
     Handler mHandler = new Handler(){
     	
     	 public void handleMessage(Message msg){ 
@@ -83,7 +86,10 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);		
+		setContentView(R.layout.activity_main);	
+		sfv = (SurfaceView)findViewById(R.id.soundWave);
+		sfv.setZOrderOnTop(true);
+		sfv.getHolder().setFormat(PixelFormat.TRANSLUCENT);
 		intro = (TextView)findViewById(R.id.intro);
 		intro.setMovementMethod(new ScrollingMovementMethod());
 		hint = (TextView)findViewById(R.id.hint);
@@ -117,7 +123,7 @@ public class MainActivity extends Activity {
 	        		 isFinish = false;
 		             m_recorder = new Saudioclient(mHandler);  
 		             m_recorder.init();
-		             m_recorder.startRecord(funcSelect);
+		             m_recorder.startRecord(funcSelect, sfv);
 		             wave.setTrigger();
 		             wave.postInvalidate();
 	        	}
