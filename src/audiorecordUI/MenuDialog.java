@@ -28,14 +28,39 @@ public class MenuDialog {
 		// TODO Auto-generated constructor stub
 		this.context = context;
 		this.mHandler = mHandler;
+		int shadow = 24;
 		ad = new android.app.AlertDialog.Builder(context).create();
         ad.show();
         window = ad.getWindow();
         window.setContentView(R.layout.menudialog);
-//        f1 = (FrameLayout) window.findViewById(R.id.franme1);
-//        f2 = (FrameLayout) window.findViewById(R.id.franme2);
-//        f3 = (FrameLayout) window.findViewById(R.id.franme3);
-//        f4 = (FrameLayout) window.findViewById(R.id.franme4);
+        f1 = (FrameLayout) window.findViewById(R.id.franme1);
+        f2 = (FrameLayout) window.findViewById(R.id.franme2);
+        f3 = (FrameLayout) window.findViewById(R.id.franme3);
+        f4 = (FrameLayout) window.findViewById(R.id.franme4);
+      //**************************************************************************************************设置f1上边距
+        FrameLayout.LayoutParams lp1 = (android.widget.FrameLayout.LayoutParams) f1.getLayoutParams();
+        lp1.setMargins(0, 0, 0, 0);
+        f1.setLayoutParams(lp1);
+      //**************************************************************************************************设置f2上边距
+        int w = View.MeasureSpec.makeMeasureSpec(0,View.MeasureSpec.UNSPECIFIED);
+        int h = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        f1.measure(w, h);
+        int f1Height = f1.getMeasuredHeight() - shadow;
+        FrameLayout.LayoutParams lp2 = (android.widget.FrameLayout.LayoutParams) f2.getLayoutParams();
+        lp2.setMargins(0, f1Height , 0, 0);
+        f2.setLayoutParams(lp2);
+      //**************************************************************************************************设置f3上边距
+        f2.measure(w, h);
+        int f2Height = f2.getMeasuredHeight() - shadow;
+        FrameLayout.LayoutParams lp3 = (android.widget.FrameLayout.LayoutParams) f3.getLayoutParams();
+        lp3.setMargins(0, f2Height + f1Height, 0, 0);
+        f3.setLayoutParams(lp3);
+      //**************************************************************************************************设置f4上边距
+        f3.measure(w, h);
+        int f3Height = f3.getMeasuredHeight() - shadow;
+        FrameLayout.LayoutParams lp4 = (android.widget.FrameLayout.LayoutParams) f4.getLayoutParams();
+        lp4.setMargins(0, f3Height + f2Height + f1Height, 0, 0);
+        f4.setLayoutParams(lp4);
         
         LayoutParams p = window.getAttributes();
         p.width = (int)(sw*0.7);
@@ -75,7 +100,7 @@ public class MenuDialog {
 				ad.dismiss();
 			}});
 		ib3.setOnTouchListener(new ButtonSelected());
-		//******************************************************************************		
+//******************************************************************************		
 		ib4 = (ImageButton)window.findViewById(R.id.b4);
 		ib4.setOnClickListener(new Button.OnClickListener(){
 			@Override

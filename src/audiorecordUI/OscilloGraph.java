@@ -42,13 +42,13 @@ public class OscilloGraph {
 	{
 		return sfv.getWidth();
 	}
-	public short[] take()
+	public short take()
 	{
 		short[] data = null;
-		short[] temp = new short[1];
+		short temp = 0;
 		try {
 				data = dataQueue.take();						
-				temp[0] = _math.max(data);
+				temp = _math.max(data);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

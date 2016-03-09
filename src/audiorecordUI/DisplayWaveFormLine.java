@@ -29,22 +29,24 @@ public class DisplayWaveFormLine extends Thread{
 		sfvWidth = og.getSFVWidth();
 		maxLineNum = sfvWidth / (lineWidth + gapWidth);
 		bmres = new BitmapToDisRes();
-		//new Thread( new ContinuousDisplayLine(bmres, og,lineWidth, gapWidth)).start();
-		
+		disArray = new short[maxLineNum];		
 	}
 
 	@Override
 	public void run() 
 	{
 		// TODO Auto-generated method stub		
-		disArray = null;
 		while(!og.isFinish() || !og.isEmpty())
 		{
-        	short[] data = og.take();
-        	if(disArray == null)       	
-        		disArray = data.clone();       	
+        	short data = og.take();
+        	if(pos + 1 >= maxLineNum)  //如果disArray满了，则将第一个元素除去，整体向前移动一个元素
+        	{
+        		short[] temp = disArray.clone();
+        		System.arraycopy(temp, 1, disArray, 0, temp.length - 1);  
+        		disArray[pos] = data;
+        	}
         	else
-        		disArray = _math.mergeArray(disArray,data);//将新加的data数据添加到显示数组后边
+        		disArray[++pos] = data;//将新加的data数据添加到显示数组后边
         	drawWaveForm();     //将disArray中的数据绘制出来
 		}	
 	}
@@ -52,45 +54,30 @@ public class DisplayWaveFormLine extends Thread{
 	{		
 		Paint paint = new Paint();
 		paint.setColor(Color.WHITE);
-		for(int i = pos; i  < disArray.length;i++)
-		{		
-//			Canvas canvas = og.lockCanvas(); //一号方法
-//			canvas.drawColor(Color.TRANSPARENT,Mode.CLEAR); 
-			Bitmap bm = Bitmap.createBitmap(sfvWidth, sfvHeight, Config.ARGB_8888);//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法
-		
-			Canvas bmCanvas = new Canvas(bm);
-			bmCanvas.drawColor(Color.TRANSPARENT,Mode.CLEAR);
-			
-			for(int j = 0;j <= i; j++)
-			{			
-				if(sfvWidth - (i - j + 1) * (lineWidth + gapWidth) < 0)
-					continue;
-//					if(canvas == null)
-//						return;
-				
-				float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 200 + 4;
-				volume /= 2;
-				volume = (float) Math.floor(volume);
-				int alpha = (int) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 255 + 150;
-				alpha = (alpha > 255) ? 255 : alpha;
-				paint.setAlpha(alpha);								
-//				canvas.drawRect(sfvWidth - (i - j + 1) * (lineWidth + gapWidth), (baseLine + volume), sfvWidth - (i - j) * (lineWidth + gapWidth ) - gapWidth, (baseLine - volume), paint);				
-				bmCanvas.drawRect(sfvWidth - (i - j + 1) * (lineWidth + gapWidth), (baseLine + volume), sfvWidth - (i - j) * (lineWidth + gapWidth ) - gapWidth, (baseLine - volume), paint);
-			}
-			bmres.put(bm, paint);
-			continuousDisplay(bm, paint);
-// 			og.unlockCanvasAndPost(canvas);
+		Bitmap bm = Bitmap.createBitmap(sfvWidth, sfvHeight, Config.ARGB_8888);//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法		
+		Canvas bmCanvas = new Canvas(bm);
+		bmCanvas.drawColor(Color.TRANSPARENT,Mode.CLEAR);		
+		for(int j = 0; j <= pos; j++)//绘制第pos个数据前的0到pos个数据
+		{			
+			if(sfvWidth - (pos - j + 1) * (lineWidth + gapWidth) < 0)
+				continue;				
+			float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 200 + 4;
+			volume /= 2;
+			volume = (float) Math.floor(volume);
+			int alpha = (int) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 255 + 150;
+			alpha = (alpha > 255) ? 255 : alpha;
+			paint.setAlpha(alpha);								
+			bmCanvas.drawRect(sfvWidth - (pos - j + 1) * (lineWidth + gapWidth), (baseLine + volume), sfvWidth - (pos - j) * (lineWidth + gapWidth ) - gapWidth, (baseLine - volume), paint);
 		}
-		if(disArray.length > maxLineNum)
-			disArray = _math.copyByIndex(disArray, disArray.length - maxLineNum, disArray.length - 1);	
-		
-		pos = disArray.length;
+		continuousDisplay(bm, paint);
 	}
-	private void continuousDisplay(Bitmap bm, Paint paint)
+	private void continuousDisplay(Bitmap bm, Paint paint)//将一个位图向前移动
 	{
-		for(int s = 0; s <= lineWidth + gapWidth; s += 8)
+		for(int s = 0; s <= lineWidth + gapWidth; s += 6)
 		{
 			Canvas canvas = og.lockCanvas();
+			if(canvas == null)
+				return;
 			canvas.drawColor(Color.TRANSPARENT,Mode.CLEAR);
 			canvas.drawBitmap(bm, lineWidth + gapWidth - s, 0, paint);
 			og.unlockCanvasAndPost(canvas);
