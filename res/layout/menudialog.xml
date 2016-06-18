@@ -6,13 +6,13 @@
     
      >   
      <FrameLayout
-        android:id="@+id/franme4"
+        android:id="@+id/franme3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="174dp"
+        android:layout_marginTop="114dp"
         >
 	       <ImageButton
-	        android:id="@+id/b4" 
+	        android:id="@+id/b3" 
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	      	android:background="@drawable/b4"/>
@@ -23,32 +23,10 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="Recording and write"
+            android:text="Restore the original settings"
             android:textColor="#e1bb87"/>  
 	 </FrameLayout>
-	 
-	 <FrameLayout
-        android:id="@+id/franme3"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="115dp"
-        >
-	      <ImageButton
-	        android:id="@+id/b3" 
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	      	android:background="@drawable/b3"/>
-	      <TextView
-            android:id="@+id/b3txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textStyle="normal"
-            android:textSize="16dp"
-            android:text="Recording and real-time decoding"
-            android:textColor="#e1bb87"/>  
-      </FrameLayout>
-      
+	   
 	  <FrameLayout
         android:id="@+id/franme2"
         android:layout_width="fill_parent"
@@ -68,7 +46,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="Local real-time decoding"
+            android:text="Local decoding"
             android:textColor="#e1bb87"/>  
      </FrameLayout>
      
@@ -90,7 +68,7 @@
             android:layout_gravity="center"
             android:textStyle="normal"
             android:textSize="16dp"
-            android:text="Local offline decoding"
+            android:text="Record and save"
             android:textColor="#e1bb87"/>          	       
      </FrameLayout>
 

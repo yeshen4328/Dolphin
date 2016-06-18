@@ -1,20 +1,18 @@
 package audiorecordUI;
 
-import mathTools._math;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
-import android.util.Log;
 
 public class DisplayWaveFormLine extends Thread{
 	OscilloGraph og = null;
 	int drawTime = 1000 / 15;
 	long lastTime;
 	int baseLine, sfvWidth, sfvHeight;
-	int gapWidth = 7, lineWidth = 5;
+	int gapWidth = 8, lineWidth = 4;
 	int pos = 0, posImBm = 0, threshold = 300;
 	short[] disArray;
 	int maxLineNum = 0;
@@ -61,19 +59,19 @@ public class DisplayWaveFormLine extends Thread{
 		{			
 			if(sfvWidth - (pos - j + 1) * (lineWidth + gapWidth) < 0)
 				continue;				
-			float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 200 + 4;
+			float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 350 + 4;
 			volume /= 2;
-			volume = (float) Math.floor(volume);
+			volume = (float) Math.floor(volume );
 			int alpha = (int) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 255 + 150;
 			alpha = (alpha > 255) ? 255 : alpha;
-			paint.setAlpha(alpha);								
+			paint.setAlpha(alpha);
 			bmCanvas.drawRect(sfvWidth - (pos - j + 1) * (lineWidth + gapWidth), (baseLine + volume), sfvWidth - (pos - j) * (lineWidth + gapWidth ) - gapWidth, (baseLine - volume), paint);
 		}
 		continuousDisplay(bm, paint);
 	}
 	private void continuousDisplay(Bitmap bm, Paint paint)//将一个位图向前移动
 	{
-		for(int s = 0; s <= lineWidth + gapWidth; s += 6)
+		for(int s = 0; s <= lineWidth + gapWidth; s += 8)
 		{
 			Canvas canvas = og.lockCanvas();
 			if(canvas == null)

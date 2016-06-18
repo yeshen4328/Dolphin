@@ -55,7 +55,7 @@ public class OscilloGraph {
 		}		
 		return temp;
 	}
-	public boolean isEmpty()
+	public  boolean isEmpty()
 	{
 		return dataQueue.isEmpty();
 	}
@@ -63,7 +63,7 @@ public class OscilloGraph {
 	{
 		this.isFinish = finish;
 	}
-	public boolean isFinish()
+	public synchronized boolean isFinish()
 	{
 		return isFinish;
 	}

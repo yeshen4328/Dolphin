@@ -35,7 +35,7 @@ public class DispalyData
 	{
 		return dataQueue.isEmpty();
 	}
-	public boolean isFinish()
+	public synchronized boolean isFinish()
 	{
 		return finish;
 	}

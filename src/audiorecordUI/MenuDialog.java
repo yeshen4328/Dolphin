@@ -36,7 +36,6 @@ public class MenuDialog {
         f1 = (FrameLayout) window.findViewById(R.id.franme1);
         f2 = (FrameLayout) window.findViewById(R.id.franme2);
         f3 = (FrameLayout) window.findViewById(R.id.franme3);
-        f4 = (FrameLayout) window.findViewById(R.id.franme4);
       //**************************************************************************************************设置f1上边距
         FrameLayout.LayoutParams lp1 = (android.widget.FrameLayout.LayoutParams) f1.getLayoutParams();
         lp1.setMargins(0, 0, 0, 0);
@@ -55,15 +54,9 @@ public class MenuDialog {
         FrameLayout.LayoutParams lp3 = (android.widget.FrameLayout.LayoutParams) f3.getLayoutParams();
         lp3.setMargins(0, f2Height + f1Height, 0, 0);
         f3.setLayoutParams(lp3);
-      //**************************************************************************************************设置f4上边距
-        f3.measure(w, h);
-        int f3Height = f3.getMeasuredHeight() - shadow;
-        FrameLayout.LayoutParams lp4 = (android.widget.FrameLayout.LayoutParams) f4.getLayoutParams();
-        lp4.setMargins(0, f3Height + f2Height + f1Height, 0, 0);
-        f4.setLayoutParams(lp4);
-        
+
         LayoutParams p = window.getAttributes();
-        p.width = (int)(sw*0.7);
+        p.width = (int)(sw*0.8);
         p.height = (int)(sh*0.4);     
         window.setAttributes(p);  
         setButton();
@@ -76,7 +69,7 @@ public class MenuDialog {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mHandler.sendEmptyMessage(LOCAL_OFFLINE_DECODE);
+				mHandler.sendEmptyMessage(RECORD_WRITETOFILE);
 				ad.dismiss();
 			}});
 		ib1.setOnTouchListener(new ButtonSelected());
@@ -100,16 +93,7 @@ public class MenuDialog {
 				ad.dismiss();
 			}});
 		ib3.setOnTouchListener(new ButtonSelected());
-//******************************************************************************		
-		ib4 = (ImageButton)window.findViewById(R.id.b4);
-		ib4.setOnClickListener(new Button.OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				mHandler.sendEmptyMessage(RECORD_WRITETOFILE);
-				ad.dismiss();
-			}});
-		ib4.setOnTouchListener(new ButtonSelected());
+
 	}
 
 }

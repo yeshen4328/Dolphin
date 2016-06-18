@@ -32,11 +32,11 @@ public class CalibrateData {
 	{
 		return dataQueue.isEmpty();
 	}
-	public boolean isFinish()
+	public synchronized boolean isFinish()
 	{
 		return isFinish;
 	}
-	public void setFinish(boolean finish)
+	public synchronized void setFinish(boolean finish)
 	{
 		this.isFinish = finish;
 	}

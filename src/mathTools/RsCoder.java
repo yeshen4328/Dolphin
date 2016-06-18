@@ -3,7 +3,7 @@ package mathTools;
 public class RsCoder {
 	private static final int MM = 8;  
     private static final int NN = 255;  
-    private static final int KK = 127;  
+    private static final int KK = 65;  
     private static final int TT = (NN - KK) / 2; 
     
     private int[] pp = {1,0,1,1,1,0,0,0,1};  
