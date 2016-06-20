@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="E:/EclipseWorkSpace/AudioRecorderForMp3/libs/flame.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="/RealTimeEncodingAudioPlayer"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
