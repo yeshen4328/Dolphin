@@ -26,7 +26,7 @@ public class CalibrationLine implements Runnable
 		new Thread(new DisplayLine(share, display)).start();
 		RsCoder rs = new RsCoder();
 		int[] block = new int[NN];
-		int size = 0;
+		int size = 0, _i = 0;
 		decodeArea = cali.take();
 		size += decodeArea.length;
 		
@@ -46,6 +46,7 @@ public class CalibrationLine implements Runnable
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			long start = System.currentTimeMillis();
+			
 			byte[] msg = rs.rsDecode(window);
 			long end = System.currentTimeMillis();
 			Log.i("time","rsDecodeTime:"+Long.toString(end - start)); 
