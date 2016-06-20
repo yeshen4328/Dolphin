@@ -30,7 +30,7 @@ public class CalibrationLine implements Runnable
 		decodeArea = cali.take();
 		size += decodeArea.length;
 		
-		while(!cali.isEmpty() || !cali.isFinish())			
+		while(!cali.isEmpty() || !cali.isFinish())
 		{
 			while(size < NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到255字节，用于后面rs解码
 			{
