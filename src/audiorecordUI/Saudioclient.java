@@ -61,25 +61,23 @@ public class Saudioclient extends Thread {
     	m_in_rec.startRecording();   
     	og = new OscilloGraph(sfv);
 	    share = new SharedData(mHandler);
-	    if(func == 1)//本地离线解码
-	    {
-	    	double[] data = CustomStream.readRawDataAndTrans2Double(RAWAUDIONAME);
-	    	new Thread(new AudioProcess(data, share)).start();
+	    if(func == 1)//录音写入文件
+	    {  	
+	    	new Thread(new AudioRecordThread()).start(); 
+	    	new Thread(new WriteToFile()).start();
 	    }
-	    else if(func == 2)//本地实时解码
+	    else if(func == 2)//本地解码
 	    {
 	    	new Thread(new AudioRead()).start();
-	    	new Thread(new DataExtractionLine(share)).start();
+	    	new Thread(new DataExtractionLine(share)).start();	    	
 	    }
-	    else if(func == 3)//录音实时解码
+	    else if(func == 3)//恢复设置
 	    {
 	    	new Thread(new AudioRecordThread()).start();  
 	    	new Thread(new DataExtractionLine(share)).start();
-	    }
-	    else //录音写入文件
-	    {
-	    	new Thread(new AudioRecordThread()).start(); 
-	    	new Thread(new WriteToFile()).start();
+	    	
+	    	
+	    	
 	    }
     }
   
@@ -116,8 +114,7 @@ public class Saudioclient extends Thread {
 			}
 			
 			while(!share.isEmpty() || !share.isFinish())
-			{
-				
+			{			
 				short[] data = share.takeRaw();
 				for(int i = 0; i < data.length; i++)
 					try {

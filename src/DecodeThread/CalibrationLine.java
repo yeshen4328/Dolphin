@@ -1,7 +1,6 @@
 package DecodeThread;
 
 import android.util.Log;
-import android.view.Display;
 import mathTools.RsCoder;
 import mathTools._math;
 //数据校正线程，从数据提取线程中获取数据并用rs矫正接收到的数据，最后显示

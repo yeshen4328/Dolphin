@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
     		 }
     		 else if(msg.what == Status.WRITING_FINISH)
     			 Toast.makeText(MainActivity.this, "Write Finish", Toast.LENGTH_LONG).show();
-    		 else if(msg.what == MenuDialog.LOCAL_OFFLINE_DECODE)
+    		 else if(msg.what == MenuDialog.RECORD_WRITETOFILE)
     		 {
     			 funcSelect = 1;
     			 hint.setText("Local offline");
@@ -66,17 +66,12 @@ public class MainActivity extends Activity {
     		 else if(msg.what == MenuDialog.LOCAL_REALTIME_DECODE)
     		 {
     			 funcSelect = 2;
-    			 hint.setText("Local realtime");
+    			 hint.setText("Local decoding");
     		 }
     		 else if(msg.what == MenuDialog.RECORD_REALTIME_DECODE)
     		 {
     			 funcSelect = 3;
-    			 hint.setText("Record realtime");
-    		 }
-    		 else if(msg.what == MenuDialog.RECORD_WRITETOFILE)
-    		 {
-    			 funcSelect = 4;
-    			 hint.setText("Record to file");
+    			 hint.setText("Restore the original settings");
     		 }
     		 isFinish = true;
     		 isStart = false;
