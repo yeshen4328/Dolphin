@@ -178,7 +178,7 @@ public class DataExtractionLine implements Runnable
 		// TODO Auto-generated method stub	
 		new Thread(new CalibrationLine(cali, share)).start();
 		
-		byte[] oneByte = new byte[8];
+		byte[] oneWord = new byte[8];
 		int Ns = 100;		
 		double symbolTime = 0.22;
 		double sigNum_sym = fs * symbolTime;//每个symbol的信号数，采样频率*每个symbol持续时间；
@@ -215,9 +215,9 @@ public class DataExtractionLine implements Runnable
 			System.arraycopy(Y, 0, tmp, 0, tmp.length);
 			A = _math.cAbs(tmp);
 			
-			int[] msg = new int[8];
+			int[] msg = new int[64 / _math.MM];
 				
-			for(int j = 0, countByte = 0, countBit = 0; j < 64; j++)
+			for(int j = 0, countWord = 0, countBit = 0; j < 64; j++)
 			{
 				sig = 0;
 				System.arraycopy(A, _math.round(startPoint), window, 0, window.length);
@@ -236,12 +236,12 @@ public class DataExtractionLine implements Runnable
 				sins[i * 64 + j] = sig;
 				startPoint += PEAKDIS;
 //*********************************************************************************************
-				oneByte[countBit++] = sig;
-				if(countBit == 8)
+				oneWord[countBit++] = sig;
+				if(countBit == _math.MM)
 				{	
 					countBit = 0;	
-					int tmpByte = bin2Byte(oneByte);							
-					msg[countByte++] = tmpByte;
+					int tmpByte = bin2Byte(oneWord);							
+					msg[countWord++] = tmpByte;
 				}			
 //*********************************************************************************************
 			}
@@ -284,7 +284,7 @@ public class DataExtractionLine implements Runnable
 	private int bin2Byte(byte[] d)
 	{
 		int out = 0;
-		for(int i = 0; i < 8; i++)		
+		for(int i = 0; i <  _math.MM; i++)		
 			out += d[i] * Math.pow(2, 7 - i);	
 		return out;
 	}

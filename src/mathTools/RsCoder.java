@@ -1,12 +1,12 @@
 package mathTools;
 
 public class RsCoder {
-	private static final int MM = 8;  
-    private static final int NN = 255;  
-    private static final int KK = 127;  
-    private static final int TT = (NN - KK) / 2; 
+	private int MM = _math.MM;  
+    private int NN = _math.NN;  
+    private int KK = _math.KK;  
+    private int TT = (NN - KK) / 2; 
     
-    private int[] pp = {1,0,1,1,1,0,0,0,1};  
+    private int[] pp =_math.pp;  
     private int[] alphaTo = new int[NN+1];  
     private int[] indexOf = new int[NN+1];  
     private int[] gg = new int[NN-KK+1];  

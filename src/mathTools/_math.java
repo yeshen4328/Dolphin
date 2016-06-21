@@ -2,6 +2,11 @@ package mathTools;
 
 
 public class _math {
+	public static int MM = 4; 
+	public static final int NN = 15;  
+	public static final int KK = 9;  
+	public static final int TT = (NN - KK) / 2; 
+	public static final int[] pp = {1,1,0,0,1}; 
 	public static byte[] intToByteA(int[] src)
 	{
 		byte[] des = new byte[src.length];

@@ -9,7 +9,7 @@ public class CalibrationLine implements Runnable
 {
 	CalibrateData cali = null;
 	SharedData share = null;
-    private static final int NN = 255;  
+    private int NN = _math.NN;  
     int[] tmpReadData = null;
     int[] decodeArea = null;
 	public CalibrationLine(CalibrateData cali, SharedData share) 
@@ -32,22 +32,25 @@ public class CalibrationLine implements Runnable
 		
 		while(!cali.isEmpty() || !cali.isFinish())			
 		{
-			while(size < NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到255字节，用于后面rs解码
+			while(size < 2 * NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到255字节，用于后面rs解码
 			{
 				tmpReadData = cali.take();
 				resize(tmpReadData.length + decodeArea.length);
-				size += tmpReadData.length;		
+				size += tmpReadData.length;
 			}
 			if(cali.isFinish() && cali.isEmpty())
 				break;
-			int[] window = _math.copyByIndex(decodeArea, 0, NN - 1);//截取前225字节
+			int[] window1 = _math.copyByIndex(decodeArea, 0, NN - 1);//截取前NN字节
+			int[] window2 = _math.copyByIndex(decodeArea, NN, 2 * NN - 1);
 			int[] tmp = decodeArea.clone();
 			decodeArea = _math.copyByIndex(tmp, NN, tmp.length - 1);
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			long start = System.currentTimeMillis();
 			
-			byte[] msg = rs.rsDecode(window);
+			byte[] msg1 = rs.rsDecode(window1);
+			byte[] msg2 = rs.rsDecode(window2);
+			byte[] msg = combination(msg1, msg2);
 			long end = System.currentTimeMillis();
 			Log.i("time","rsDecodeTime:"+Long.toString(end - start)); 
 			display.put(msg);
@@ -68,5 +71,17 @@ public class CalibrationLine implements Runnable
 		System.arraycopy(decodeArea, 0, newArea, 0, oldCapacity);
 		System.arraycopy(tmpReadData, 0, newArea, oldCapacity, dataCapacity);
 	}
-
+	private byte[] combination(byte[] msg1, byte[] msg2)
+	{
+		byte[] msg = new byte[(msg1.length + msg2.length)/2];
+		byte[] merge = new byte[msg1.length + msg2.length];
+		System.arraycopy(msg1, 0, merge, 0, msg1.length);
+		System.arraycopy(msg2, 0, merge, msg1.length, msg2.length);
+		for(int i = 0, j = 0; i < msg.length; i += 2, j++)
+		{
+			msg[j] = (byte) (merge[i] & 0xf);
+			msg[j] &= (merge[i + 1] & 0xf) << 4;
+		}
+		return msg;
+	}
 }
