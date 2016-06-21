@@ -4,7 +4,7 @@ package mathTools;
 public class _math {
 	public static int MM = 4; 
 	public static final int NN = 15;  
-	public static final int KK = 9;  
+	public static final int KK = 3;  
 	public static final int TT = (NN - KK) / 2; 
 	public static final int[] pp = {1,1,0,0,1}; 
 	public static byte[] intToByteA(int[] src)
@@ -208,7 +208,7 @@ public class _math {
 	public static int[] copyByIndex(int[] src, int start, int end){
 		int[] copy = new int[end - start + 1];
 		if (copy.length == 0)
-			return null;
+			return new int[0];
 		if(end >= src.length)
 			try {
 					throw new copyByIndexOutOfIndex();

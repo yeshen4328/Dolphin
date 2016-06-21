@@ -178,7 +178,7 @@ public class DataExtractionLine implements Runnable
 		// TODO Auto-generated method stub	
 		new Thread(new CalibrationLine(cali, share)).start();
 		
-		byte[] oneWord = new byte[8];
+		byte[] oneWord = new byte[_math.MM];
 		int Ns = 100;		
 		double symbolTime = 0.22;
 		double sigNum_sym = fs * symbolTime;//每个symbol的信号数，采样频率*每个symbol持续时间；
@@ -285,7 +285,7 @@ public class DataExtractionLine implements Runnable
 	{
 		int out = 0;
 		for(int i = 0; i <  _math.MM; i++)		
-			out += d[i] * Math.pow(2, 7 - i);	
+			out += d[i] * Math.pow(2, _math.MM - 1 - i);	
 		return out;
 	}
 

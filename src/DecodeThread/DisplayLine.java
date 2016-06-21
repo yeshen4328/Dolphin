@@ -32,13 +32,13 @@ public class DisplayLine implements Runnable
 			int count = 0;
 			while(count < decodeArea.length)
 			{
-				if(decodeArea[count] == 44 || decodeArea[count] == 46)
+				if(true || decodeArea[count] == 44 || decodeArea[count] == 46)
 				{
 					byte[] tmp = _math.copyByIndex(decodeArea, 0, count);
 					
 					share.displayInfo(new String(tmp));
 					try {
-							Thread.sleep(2000);
+							Thread.sleep(1);
 
 					} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -57,7 +57,7 @@ public class DisplayLine implements Runnable
 			}
 		}
 		Log.i("msg", "display finish");
-		share.displayInfo("display finish");
+		//share.displayInfo("display finish");
 	}
 
 }

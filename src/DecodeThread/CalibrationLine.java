@@ -24,14 +24,13 @@ public class CalibrationLine implements Runnable
 		DispalyData display = new DispalyData();
 		new Thread(new DisplayLine(share, display)).start();
 		RsCoder rs = new RsCoder();
-		int[] block = new int[NN];
-		int size = 0, _i = 0;
+		int size = 0;
 		decodeArea = cali.take();
 		size += decodeArea.length;
 		
 		while(!cali.isEmpty() || !cali.isFinish())			
 		{
-			while(size < 2 * NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到255字节，用于后面rs解码
+			while(size < 2 * NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到2NN字节，用于后面rs解码
 			{
 				tmpReadData = cali.take();
 				resize(tmpReadData.length + decodeArea.length);
@@ -42,7 +41,7 @@ public class CalibrationLine implements Runnable
 			int[] window1 = _math.copyByIndex(decodeArea, 0, NN - 1);//截取前NN字节
 			int[] window2 = _math.copyByIndex(decodeArea, NN, 2 * NN - 1);
 			int[] tmp = decodeArea.clone();
-			decodeArea = _math.copyByIndex(tmp, NN, tmp.length - 1);
+			decodeArea = _math.copyByIndex(tmp, 2 * NN, tmp.length - 1);
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			long start = System.currentTimeMillis();
@@ -76,10 +75,11 @@ public class CalibrationLine implements Runnable
 		byte[] merge = new byte[msg1.length + msg2.length];
 		System.arraycopy(msg1, 0, merge, 0, msg1.length);
 		System.arraycopy(msg2, 0, merge, msg1.length, msg2.length);
-		for(int i = 0, j = 0; i < msg.length; i += 2, j++)
+		
+		for(int i = 0, j = 0; i < merge.length; i += 2, j++)
 		{
-			msg[j] = (byte) (merge[i] & 0xf);
-			msg[j] &= (merge[i + 1] & 0xf) << 4;
+			msg[j] = (byte) ((merge[i] & 0xf) << 4);
+			msg[j] ^= (merge[i + 1] & 0xf) ;
 		}
 		return msg;
 	}

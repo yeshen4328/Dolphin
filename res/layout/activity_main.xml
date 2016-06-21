@@ -22,7 +22,7 @@
       android:layout_height="300dp"
       android:layout_marginTop="55dp"
       android:layout_centerHorizontal="true"
-      android:maxLines = "10"
+      android:maxLines = "25"
 	  android:scrollbars = "vertical"
       android:textColor="#ffffff"
       android:textSize="15sp" />
