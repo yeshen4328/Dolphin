@@ -54,11 +54,11 @@ public class SharedData
 		}
 		return data;
 	}
-	public boolean isEmpty()
+	public synchronized boolean isEmpty()
 	{
 		return dataQueue.isEmpty();
 	}
-	public boolean isFinish()
+	public synchronized boolean isFinish()
 	{
 		return finish;
 	}

@@ -45,7 +45,6 @@ public class CalibrationLine implements Runnable
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			long start = System.currentTimeMillis();
-			
 			byte[] msg1 = rs.rsDecode(window1);
 			byte[] msg2 = rs.rsDecode(window2);
 			byte[] msg = combination(msg1, msg2);
