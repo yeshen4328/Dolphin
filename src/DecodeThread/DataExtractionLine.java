@@ -16,6 +16,7 @@ import mathTools.Mfft;
 public class DataExtractionLine implements Runnable
 {
 	SharedData share = null;
+	int para = 32;
 	double fs = 44100;
 	double preTime = 0.11;
 	CalibrateData cali = new CalibrateData();
@@ -135,10 +136,10 @@ public class DataExtractionLine implements Runnable
 		ft = new Mfft(N);
 		peakDis = 100 *  N/ (double)fs;
 		startPoint = 167 * peakDis + peakDis / 2;
-		double[] pksSequence = new double[101];
+		double[] pksSequence = new double[31];
 		double[] temp;	
 		double energy = 0;	
-		for(int i = 0; i < 3000; i += 30)
+		for(int i = 0; i < 3000; i += 100)
 		{
 			while(i + preNum > decodeArea.length)
 			{
@@ -148,12 +149,68 @@ public class DataExtractionLine implements Runnable
 			temp = _math.copyByIndex(decodeArea, i, i + preNum - 1);
 			Y = ft.fft(temp);
 			A = _math.cAbs(Y);
-			window = _math.copyByIndex(A, _math.round(startPoint), _math.round(startPoint + peakDis) - 1);
+			window = _math.copyByIndex(A, _math.round(startPoint), _math.round(startPoint + 2*peakDis/3) - 1);
 			energy = _math.sum(_math.sqrArray(window));
-			pksSequence[i/30 + 1] = energy;
+			pksSequence[i/100 + 1] = energy;
 		}
 		int loc = _math.maxLoc(pksSequence);
-		preamble =  30 * (loc - 1) + 4850;
+		int premleft2 = 0;
+		double[] premregion2 = new double[100 + preNum];
+		if(loc > 1 && loc < 31)
+		{
+			if(pksSequence[loc - 1] > pksSequence[loc + 1])
+			{
+				premleft2 = preamble + 100 * (loc - 2);
+				while(100 + preNum > decodeArea.length)
+				{
+					tmpReadData = share.take();
+					resize(decodeArea.length + tmpReadData.length);
+				}
+				System.arraycopy(decodeArea, 100*(loc - 2), premregion2, 0, preNum + 100);
+			}
+			else
+			{
+				premleft2 = preamble + 100 * (loc - 1);
+				while(100 + preNum > decodeArea.length)
+				{
+					tmpReadData = share.take();
+					resize(decodeArea.length + tmpReadData.length);
+				}
+				System.arraycopy(decodeArea, 100*(loc - 1), premregion2, 0, preNum + 100);
+			}
+		}
+		else if(loc == 1)
+		{
+			premleft2 = preamble + 100 * (loc - 1);
+			while(100 + preNum > decodeArea.length)
+			{
+				tmpReadData = share.take();
+				resize(decodeArea.length + tmpReadData.length);
+			}
+			System.arraycopy(decodeArea, 100*(loc - 1), premregion2, 0, preNum + 100);
+		}
+		else
+		{
+			premleft2 = preamble + 100 * (loc - 1);
+			while(100 + preNum > decodeArea.length)
+			{
+				tmpReadData = share.take();
+				resize(decodeArea.length + tmpReadData.length);
+			}
+			System.arraycopy(decodeArea, 100 * (loc - 2), premregion2, 0, preNum + 100);
+		}
+		double[] pkSquence2 = new double[21];
+		for(int i = 0; i < 100; i+=5)
+		{
+			double[] tmp = _math.copyByIndex(premregion2, i, i + preNum);
+			Y = ft.fft(tmp);
+			A = _math.cAbs(Y);
+			window = _math.copyByIndex(A, _math.round(startPoint), _math.round(startPoint + 2*peakDis/3));
+			energy = _math.sum(_math.sqrArray(window));
+			pkSquence2[i/5] = energy;
+		}
+		int loc2 = _math.maxLoc(pkSquence2);
+		preamble =  premleft2 + 5*(loc -1) + 4850;
 		double[] tmp = decodeArea.clone();
 		decodeArea = _math.copyByIndex(tmp, preamble - 1, tmp.length - 1);
 		long end = System.currentTimeMillis();
