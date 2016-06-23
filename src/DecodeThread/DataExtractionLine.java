@@ -58,8 +58,7 @@ public class DataExtractionLine implements Runnable
 		int counter = 0;
 		long timeSum = 0;
 		while(!share.isEmpty() || !share.isFinish())
-		{
-			
+		{		
 			if(firstCheck == 0)
 			{
 				decodeArea = share.take();
