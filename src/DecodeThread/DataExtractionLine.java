@@ -231,7 +231,7 @@ public class DataExtractionLine implements Runnable
 		new Thread(new CalibrationLine(cali, share)).start();
 		boolean flagEstimate = false;
 		byte[] oneWord = new byte[_math.MM];
-		int Ns = 200, symCount = 0, para = 32;		
+		int Ns = 200, para = 32;		
 		double symbolTime = 0.11;
 		double sigNum_sym = fs * symbolTime;//每个symbol的信号数，采样频率*每个symbol持续时间；
 		double[] sigsPerSymbol = new double[_math.round(sigNum_sym) - 441];//一个symbol的信号
@@ -253,8 +253,6 @@ public class DataExtractionLine implements Runnable
 		long timesum = 0;
 		for(int i = 0; i < Ns; i++)//解每一个symbol
 		{
-			if(symCount == 200)
-				break;
 			while(decodeArea.length < sigsPerSymbol.length + 441)
 			{
 				tmpReadData = share.take();
