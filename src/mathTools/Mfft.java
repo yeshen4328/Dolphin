@@ -63,9 +63,9 @@ public class Mfft {
     	double[] real = new double[setN];
     	double[] im = new double[setN];
         int  N = s.length;
-        if (N == 1) 
-        	return new Complex[]{new Complex(s[0])};   
-    	x = new Complex[setN];    	
+        if (N == 1)
+        	return new Complex[]{new Complex(s[0])};
+    	x = new Complex[setN];
     	System.arraycopy(s, 0, real, 0, s.length);
     	trans.fft(real, im);
     	for(int i = 0; i < setN; i++)
