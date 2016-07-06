@@ -9,6 +9,7 @@ public class CalibrationLine implements Runnable
 	CalibrateData cali = null;
 	SharedData share = null;
     private int NN = _math.NN;  
+    private int KK = _math.KK;
     int[] tmpReadData = null;
     int[] decodeArea = null;
 	public CalibrationLine(CalibrateData cali, SharedData share) 
@@ -27,10 +28,12 @@ public class CalibrationLine implements Runnable
 		int size = 0;
 		decodeArea = cali.take();
 		size += decodeArea.length;
-		
-		while(!cali.isEmpty() || !cali.isFinish())			
+		int[] window = new int[NN];
+		byte[][] msgs = new byte[5][KK];
+		int errorNum = 0, errorPos = 0;
+		while(!cali.isEmpty() || !cali.isFinish())
 		{
-			while(size < 2 * NN && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到2NN字节，用于后面rs解码
+			while(size < 5 * (NN + 1) && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到5 NN + 1字节，用于后面rs解码
 			{
 				tmpReadData = cali.take();
 				resize(tmpReadData.length + decodeArea.length);
@@ -38,18 +41,32 @@ public class CalibrationLine implements Runnable
 			}
 			if(cali.isFinish() && cali.isEmpty())
 				break;
-			int[] window1 = _math.copyByIndex(decodeArea, 0, NN - 1);//截取前NN字节
-			int[] window2 = _math.copyByIndex(decodeArea, NN, 2 * NN - 1);
+			for(int i = 0; i < 5; i++)//处理5个block,信息码放在windows中，解码的信息放在msgs中
+			{
+				window = _math.copyByIndex(decodeArea, i * (NN + 1), i * (NN + 1) + NN - 1);//截取前NN字节
+				msgs[i] = rs.rsDecode(window);			
+				byte xorReceived = (byte)decodeArea[(i + 1) * (NN + 1) - 1];
+				if(xorReceived != msgs[i][0])
+				{
+					errorNum++;
+					errorPos = i;
+				}
+			}
+			if(errorNum == 1)
+			{
+				byte tmpXor = 0;
+				for(int i = 0; i < 5; i++)
+					if(errorPos != 4 && i != errorPos)
+						tmpXor ^= msgs[i][0];
+				msgs[errorPos][0] = tmpXor;	
+			}
+			
 			int[] tmp = decodeArea.clone();
-			decodeArea = _math.copyByIndex(tmp, 2 * NN, tmp.length - 1);
+			decodeArea = _math.copyByIndex(tmp, 5 * (NN + 1), tmp.length - 1);
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
-			long start = System.currentTimeMillis();
-			byte[] msg1 = rs.rsDecode(window1);
-			byte[] msg2 = rs.rsDecode(window2);
-			byte[] msg = combination(msg1, msg2);
-			long end = System.currentTimeMillis();
-			Log.i("time","rsDecodeTime:"+Long.toString(end - start)); 
+			byte[] msg = combination(msgs);
+			
 			display.put(msg);
 		}
 		Log.i("msg","cali finish");
@@ -81,5 +98,19 @@ public class CalibrationLine implements Runnable
 			msg[j] ^= (merge[i + 1] & 0xf) ;
 		}
 		return msg;
+	}
+	private byte[] combination(byte[][] msg)
+	{
+		byte[] out = new byte[msg.length/2];
+		byte[] merge = new byte[4 * KK];
+		for(int i = 0; i < 4; i++)
+			System.arraycopy(msg[i], 0, merge, i*KK, KK);
+		
+		for(int i = 0, j =0; i < merge.length; i+=2, j++)
+		{
+			out[j] = (byte)((merge[i] & 0xf) << 4);
+			out[j] ^= (merge[i + 1] & 0xf) ;
+		}
+		return out;
 	}
 }
