@@ -22,7 +22,7 @@ public class RsCoder {
         int i, mask;  
         mask = 1;  
         alphaTo[MM] = 0;  
-        for(i=0; i<MM; i++)
+        for(i=0; i<MM; i++) 
         {  
             alphaTo[i] = mask;  
             indexOf[alphaTo[i]] = i;  

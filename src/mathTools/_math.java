@@ -175,7 +175,7 @@ public class _math {
 	public static double[] copyByIndex(double[] src, int start, int end){
 		double[] copy = new double[end - start + 1];
 		if (copy.length == 0)
-			return null;
+			return new double[0];
 		if(end >= src.length)
 			try {
 					throw new copyByIndexOutOfIndex();
