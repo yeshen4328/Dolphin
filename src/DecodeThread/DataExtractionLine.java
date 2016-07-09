@@ -229,9 +229,9 @@ public class DataExtractionLine implements Runnable
 	{
 		// TODO Auto-generated method stub	
 		new Thread(new CalibrationLine(cali, share)).start();
-		boolean flagEstimate = false;
+		boolean flagEstimate = false, flagEmbed = true;
 		byte[] oneWord = new byte[_math.MM];
-		int Ns = 200, para = 32;		
+		int Ns = 100, para = 60;		
 		double symbolTime = 0.11;
 		double sigNum_sym = fs * symbolTime;//每个symbol的信号数，采样频率*每个symbol持续时间；
 		double[] sigsPerSymbol = new double[_math.round(sigNum_sym) - 441];//一个symbol的信号
@@ -240,8 +240,8 @@ public class DataExtractionLine implements Runnable
 		byte sig = 0;
 		int N = (int) Math.pow(2,_math.nextpow2(sigsPerSymbol.length));//一个symbol的采样点数
 		Mfft ft = new Mfft(N);
-		double PEAKDIS = 200 * (double)N / (double)fs;//一帧的时间  
-		double startPoint = 0, carrierStart = 10000 * N / fs;
+		double PEAKDIS = Ns * (double)N / (double)fs;//一帧的时间  
+		double startPoint = 0, carrierStart = 14000 * 0.1;
 		
 		double[] thresholdPAPR = null;
 		double[] window = new double[(int)PEAKDIS];	  
@@ -261,6 +261,7 @@ public class DataExtractionLine implements Runnable
 			long start = System.currentTimeMillis();
 			
 			System.arraycopy(decodeArea, 400, sigsPerSymbol, 0, sigsPerSymbol.length);
+			
 			double[] cpy = decodeArea.clone();
 			decodeArea = _math.copyByIndex(cpy, _math.round(sigNum_sym), cpy.length - 1);
 			long m1 = System.currentTimeMillis();
@@ -269,51 +270,64 @@ public class DataExtractionLine implements Runnable
 			Log.i("fft",Long.toString(m2 - m1));
 			tmp = new Complex[Y.length / 2];
 			System.arraycopy(Y, 0, tmp, 0, tmp.length);
-		
+			
 			A = _math.cAbs(tmp);
+			startPoint = 200 * PEAKDIS - 2;//必须放在该位置
+			window = _math.copyByIndex(A, (int)Math.floor(startPoint), (int)Math.floor(startPoint + 2 * PEAKDIS - 2));
+			double[] _window = _math.sqrArray(window);
+			int _loc = _math.maxLoc(window);
+			if( _loc + 1 >= PEAKDIS - 3 && _loc + 1 <= PEAKDIS + 3)
+			{
+				double _pks = _math.sum(_math.copyByIndex(_window, _loc-1, _loc+1));
+				double _dtmean = (_math.sum(_window) - _pks) / (2 * PEAKDIS - 4);
+				double PAPR = _pks / _dtmean;
+				if(PAPR > 10)
+					flagEmbed = true;
+			}
 			
 			int[] msg = new int[para / _math.MM];
-			if(!flagEstimate)
-			{
-				thresholdPAPR = PAPREstimate(A, PEAKDIS, carrierStart, para);
-				flagEstimate = true;
-			}
-			else
-			{
-				startPoint = carrierStart + (PEAKDIS - 1)/2;//必须放在该位置
-				for(int j = 0, countWord = 0, countBit = 0; j < para; j++)
+			if(flagEmbed)
+				if(!flagEstimate)
 				{
-					sig = 0;
-					System.arraycopy(A, _math.round(startPoint) - 1, window, 0, window.length);
-					double pks = _math.max(window);
-					int loc = _math.maxLoc(window);
-					if(loc + 1>= (PEAKDIS + 2)/2 -2 &&  loc + 1<=  (PEAKDIS + 2) / 2 + 2)
-					{
-						pks = Math.pow(pks, 2) + Math.max(Math.pow(window[loc - 1], 2), Math.pow(window[loc + 1], 2));
-						double dtmean = (_math.sum(_math.sqrArray(window)) - pks) / (PEAKDIS - 2);
-						double PAPR = pks / dtmean;
-						if(PAPR > thresholdPAPR[j] * (1 + 0.4 * prePAPR[j]))
-							sig = 1;
-						prePAPR[j] = sig;
-					}
-					sins[i * para + j] = sig;
-					startPoint += PEAKDIS;
-	//*********************************************************************************************
-					oneWord[countBit++] = sig;
-					if(countBit == _math.MM)
-					{	
-						countBit = 0;
-						int tmpByte = bin2Byte(oneWord);							
-						msg[countWord++] = tmpByte;
-					}			
-	//*********************************************************************************************
+					thresholdPAPR = PAPREstimate(A, PEAKDIS, carrierStart, para);
+					flagEstimate = true;
 				}
-				long end = System.currentTimeMillis();
-				counter ++;
-				timesum += end - start;
-				Log.i("time","decode a symbol:" + Long.toString(end - start));
-				cali.put(msg);
-			}
+				else
+				{
+					startPoint = carrierStart - (PEAKDIS - 1) / 2;//必须放在该位置
+					for(int j = 0, countWord = 0, countBit = 0; j < para; j++)
+					{
+						sig = 0;
+						System.arraycopy(A, _math.round(startPoint) - 1, window, 0, window.length);
+						double pks = _math.max(window);
+						int loc = _math.maxLoc(window);
+						if(loc + 1>= (PEAKDIS + 2)/2 -2 &&  loc + 1<=  (PEAKDIS + 2) / 2 + 2)
+						{
+							pks = Math.pow(pks, 2) + Math.max(Math.pow(window[loc - 1], 2), Math.pow(window[loc + 1], 2));
+							double dtmean = (_math.sum(_math.sqrArray(window)) - pks) / (PEAKDIS - 2);
+							double PAPR = pks / dtmean;
+							if(PAPR > thresholdPAPR[j] * (1 + 0.3 * prePAPR[j]))
+								sig = 1;
+							prePAPR[j] = sig;
+						}
+						sins[i * para + j] = sig;
+						startPoint += PEAKDIS;
+		//*********************************************************************************************
+						oneWord[countBit++] = sig;
+						if(countBit == _math.MM)
+						{	
+							countBit = 0;
+							int tmpByte = bin2Byte(oneWord);							
+							msg[countWord++] = tmpByte;
+						}			
+		//*********************************************************************************************
+					}
+					long end = System.currentTimeMillis();
+					counter ++;
+					timesum += end - start;
+					Log.i("time","decode a symbol:" + Long.toString(end - start));
+					cali.put(msg);
+				}
 		}
 		Log.i("time", "decode a symbol average:"+Float.toString((float)timesum/(float)counter));
 		cali.setFinish(true);
