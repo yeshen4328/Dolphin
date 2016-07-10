@@ -19,7 +19,7 @@ public class CalibrationLine implements Runnable
 		this.share = share;
 	}
 	@Override
-	public void run() 
+	public void run()
 	{
 		// TODO Auto-generated method stub
 		DispalyData display = new DispalyData();
