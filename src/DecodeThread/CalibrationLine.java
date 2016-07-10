@@ -41,6 +41,7 @@ public class CalibrationLine implements Runnable
 			}
 			if(cali.isFinish() && cali.isEmpty())
 				break;
+			
 			for(int i = 0; i < 5; i++)//处理5个block,信息码放在windows中，解码的信息放在msgs中
 			{
 				window = _math.copyByIndex(decodeArea, i * (NN + 1), i * (NN + 1) + NN - 1);//截取前NN字节
