@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\EclipseWorkSpace\AudioRecord\libs\android-support-v4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ded9acc6a9792b8f1afc470f0c9cd36d178914cd">
+        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\pre-dexed\debug\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275.jar" />
+    </item>
+    <item
+        jar="E:\EclipseWorkSpace\AudioRecord\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ff9a7ac48b01e5062b1625b28e071bf6f4789433">
+        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\pre-dexed\debug\instant-run_67fb74d658c92914f3f3dbfd037b394b721988ce.jar" />
+    </item>
+    <item
+        jar="E:\EclipseWorkSpace\AudioRecord\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="9e662864065ac2e2ee2fec9f7b24c7912d9c1049">
+        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\pre-dexed\debug\instant-run-bootstrap_409dd2e774cdffd0c62d21ab9afb09a483251736.jar" />
+    </item>
+
+</items>
