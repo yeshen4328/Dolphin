@@ -55,7 +55,7 @@ public class DataExtractionLine implements Runnable
 		// TODO Auto-generated method stub
 		int firstCheck = 0, stepLen = 5000, leftP = 0, rightP = 0, preamble = 0, preNum = _math.round(fs * preTime);
 		double N = Math.pow(2,_math.nextpow2(5000));
-		double peakDis = 100* N/ fs, startPoint = 167 * peakDis, prepks = 0;
+		double peakDis = 100* N/ fs, startPoint = 198 * peakDis, prepks = 0;
 		boolean pre_flag = false;
 		double[] step , A, window;
 		Mfft ft = new Mfft((int)N);
@@ -131,7 +131,7 @@ public class DataExtractionLine implements Runnable
 		N = Math.pow(2,_math.nextpow2(preNum));
 		ft = new Mfft((int)N);
 		peakDis = 100 *  N/ fs;
-		startPoint = 16700 * N / fs + 2 *  peakDis / 3;
+		startPoint = 19800 * N / fs + 2 *  peakDis / 3;
 		double[] pksSequence = new double[31];
 		double[] temp;	
 		double energy = 0;	
@@ -151,7 +151,7 @@ public class DataExtractionLine implements Runnable
 		}
 		int loc = _math.maxLoc(pksSequence);
 	
-		if(loc > 1 && loc < 31)
+		if(loc > 0 && loc < 30)
 		{
 			if(pksSequence[loc - 1] > pksSequence[loc + 1])
 			{
@@ -240,18 +240,18 @@ public class DataExtractionLine implements Runnable
 		byte sig = 0;
 		int N = (int) Math.pow(2,_math.nextpow2(sigsPerSymbol.length));//一个symbol的采样点数
 		Mfft ft = new Mfft(N);
-		double PEAKDIS = Ns * (double)N / (double)fs;//一帧的时间  
-		double startPoint = 0, carrierStart = 14000 * 0.1;
+		double PEAKDIS = Ns * (double)N / (double)fs;//一帧的时间
+		double startPoint = 0, carrierStart = 0;
 		
 		double[] thresholdPAPR = null;
-		double[] window = new double[(int)PEAKDIS];	  
+		double[] window = null;	  
 		int[] prePAPR = new int[para];
 		for(int i = 0; i < para; i++)prePAPR[i] = 1;
 		byte[] sins = new byte[Ns * para];
 		Complex[] tmp;
 		int counter = 0;
 		long timesum = 0;
-		for(int i = 0; i < Ns; i++)//解每一个symbol
+		for(int i = 0; i < Ns + 1; i++)//解每一个symbol
 		{
 			while(decodeArea.length < sigsPerSymbol.length + 441)
 			{
@@ -272,8 +272,11 @@ public class DataExtractionLine implements Runnable
 			System.arraycopy(Y, 0, tmp, 0, tmp.length);
 			
 			A = _math.cAbs(tmp);
-			startPoint = 200 * PEAKDIS - 2;//必须放在该位置
-			window = _math.copyByIndex(A, (int)Math.floor(startPoint), (int)Math.floor(startPoint + 2 * PEAKDIS - 2));
+			/*
+			 * 保留待用
+			 */
+			/*startPoint = 200 * PEAKDIS - 2;//必须放在该位置
+			window = _math.copyByIndex(A, (int)Math.floor(startPoint), (int)Math.floor(startPoint + PEAKDIS - 1));
 			double[] _window = _math.sqrArray(window);
 			int _loc = _math.maxLoc(window);
 			if( _loc + 1 >= PEAKDIS - 3 && _loc + 1 <= PEAKDIS + 3)
@@ -283,9 +286,10 @@ public class DataExtractionLine implements Runnable
 				double PAPR = _pks / _dtmean;
 				if(PAPR > 10)
 					flagEmbed = true;
-			}
+			}*/
 			
 			int[] msg = new int[para / _math.MM];
+			carrierStart = 14000 * N / fs;
 			if(flagEmbed)
 				if(!flagEstimate)
 				{
@@ -298,19 +302,20 @@ public class DataExtractionLine implements Runnable
 					for(int j = 0, countWord = 0, countBit = 0; j < para; j++)
 					{
 						sig = 0;
-						System.arraycopy(A, _math.round(startPoint) - 1, window, 0, window.length);
+						window = _math.copyByIndex(A, (int)Math.floor(startPoint), (int)Math.floor(startPoint + PEAKDIS - 1));
 						double pks = _math.max(window);
 						int loc = _math.maxLoc(window);
-						if(loc + 1>= (PEAKDIS + 2)/2 -2 &&  loc + 1<=  (PEAKDIS + 2) / 2 + 2)
+						if(loc + 1>= (PEAKDIS + 1)/2 -2 &&  loc + 1<=  (PEAKDIS + 1) / 2 + 2)
 						{
 							pks = Math.pow(pks, 2) + Math.max(Math.pow(window[loc - 1], 2), Math.pow(window[loc + 1], 2));
 							double dtmean = (_math.sum(_math.sqrArray(window)) - pks) / (PEAKDIS - 2);
 							double PAPR = pks / dtmean;
-							if(PAPR > thresholdPAPR[j] * (1 + 0.3 * prePAPR[j]))
+							double condition = thresholdPAPR[j] * (1 + 0.3 * prePAPR[j]);
+							if(PAPR > condition)
 								sig = 1;
 							prePAPR[j] = sig;
 						}
-						sins[i * para + j] = sig;
+						sins[(i - 1) * para + j] = sig;
 						startPoint += PEAKDIS;
 		//*********************************************************************************************
 						oneWord[countBit++] = sig;
@@ -349,15 +354,15 @@ public class DataExtractionLine implements Runnable
 			double carrierStart, int para) {
 		// TODO Auto-generated method stub
 		double startPoint = carrierStart + (PEAKDIS - 1)/2, PAPRtotal = 0;
-		double[] thresholdPAPR = new double[2 * para], PAPRall = new double[para];
+		double[] thresholdPAPR = new double[para], PAPRall = new double[para/2];
 		int count = 0;
-		for(int i = 0; i < para; i++)
+		for(int i = 0; i < para/2; i++)
 		{
 			double[] window = new double[(int) PEAKDIS];
 			System.arraycopy(A, (int)Math.floor(startPoint), window, 0, (int)Math.floor(PEAKDIS));
 			double max = _math.max(window);
 			int loc = _math.maxLoc(window);
-			if(loc + 1>= (PEAKDIS + 1)/2 -1 && loc + 1<= (PEAKDIS + 1)/2 + 1)
+			if(loc + 1>= (PEAKDIS + 1)/2 - 2 && loc + 1<= (PEAKDIS + 1)/2 + 2)
 			{
 				max = max * max + Math.max(window[loc -1] * window[loc -1] , window[loc + 1] * window[loc + 1]);
  				double dtmean = (_math.sum(_math.sqrArray(window)) - max) / (PEAKDIS - 2);
@@ -366,7 +371,7 @@ public class DataExtractionLine implements Runnable
 				PAPRall[i] = PAPR;
 				PAPRtotal += PAPR;
 			}
-			startPoint += PEAKDIS;
+			startPoint += 2 * PEAKDIS;
 		}
 		double PAPRavg = PAPRtotal/count;
 		double avgThreasholdPAPR = 0;
@@ -374,13 +379,13 @@ public class DataExtractionLine implements Runnable
 			avgThreasholdPAPR = -0.001066 * Math.pow(PAPRavg, 3) + 0.04446 * Math.pow(PAPRavg, 2) - 0.34351 * PAPRavg + 3.63456;		
 		else if(PAPRavg <= 4.2)
 			avgThreasholdPAPR = 2.89;
-		else if(PAPRavg <= 200)
+		else if(PAPRavg <= 100)
 			avgThreasholdPAPR = 0.000008174926439765669 * Math.pow(PAPRavg, 3) - 0.002436227743368 * Math.pow(PAPRavg, 2) + 0.2486 * PAPRavg + 1.5669;
 		else 
-			avgThreasholdPAPR = 19.2;
+			avgThreasholdPAPR = 10.24;
 		double rate = 0.8;
-		for(int i = 0; i < 64; i++)
-			thresholdPAPR[i] = rate * avgThreasholdPAPR + (1 - rate) * _math.avgP[i] * avgThreasholdPAPR;
+		for(int i = 0; i < para; i++)
+			thresholdPAPR[i] = rate * avgThreasholdPAPR + (1 - rate) * _math.avgP_NETE4[60*i/para] * avgThreasholdPAPR;
 		
 		return thresholdPAPR;
 	}
