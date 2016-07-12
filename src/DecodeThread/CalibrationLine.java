@@ -6,6 +6,7 @@ import mathTools._math;
 //数据校正线程，从数据提取线程中获取数据并用rs矫正接收到的数据，最后显示
 public class CalibrationLine implements Runnable
 {
+	boolean DOUBLE_ERROR_CORRECTION = true;//二重纠错开关
 	CalibrateData cali = null;
 	SharedData share = null;
     private int NN = _math.NN;  
@@ -31,7 +32,7 @@ public class CalibrationLine implements Runnable
 		size += decodeArea.length;
 		
 		int[] block = new int[NN];//一个block的数据，包括NN个码字
-		byte[][] msgs = new byte[SS][KK - 1];//msgs为一个set中所含有的5 *（NN - 1）个信息码
+		
 		int errorNum = 0, errorPos = 0;
 		while(!cali.isEmpty() || !cali.isFinish())
 		{
@@ -49,6 +50,7 @@ public class CalibrationLine implements Runnable
 			/*
 			 * 分5次处理每一个block
 			 */
+			byte[][] msgs = new byte[SS][KK - 1];//msgs为一个set中所含有的5 *（NN - 1）个信息码
 			for(int i = 0; i < SS; i++)//处理5个block,信息码放在windows中，解码的信息放在msgs中
 			{
 				/*
@@ -69,15 +71,17 @@ public class CalibrationLine implements Runnable
 					errorPos = i;
 				}
 			}
-			if(errorNum == 1 && errorPos != SS - 1)
+			if(DOUBLE_ERROR_CORRECTION && errorNum == 1 && errorPos != SS - 1)
 			{
-				int[] xor = new int[KK - 1];		
+				byte[] xor = new byte[KK - 1];		
 				for(int k = 0; k < KK - 1; k++)
-					for(int j = 0; j < 4 && j != errorPos; j++)
-						xor[k] ^= msgs[j][k];
+					for(int j = 0; j < SS; j++)
+						if(j != errorPos)
+							xor[k] ^= msgs[j][k];
 				System.arraycopy(xor, 0, msgs[errorPos], 0, KK - 1);
 			}
-			
+			errorNum = 0;
+			errorPos = 0;
 			int[] tmp = decodeArea.clone();
 			decodeArea = _math.copyByIndex(tmp, SS * NN, tmp.length - 1);
 			size = decodeArea.length;
