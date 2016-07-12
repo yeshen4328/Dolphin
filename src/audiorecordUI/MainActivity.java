@@ -21,7 +21,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/*
+	本版本包含有rs纠错和二重纠错，之前几个版本的二重纠错是错误的。
+ */
 public class MainActivity extends Activity {
     private RecordButton startRecord;   
     private RecordWave wave;

@@ -48,11 +48,11 @@
         "source": "E:\\EclipseWorkSpace\\AudioRecord\\res\\drawable-xxhdpi\\b1.png"
     },
     {
-        "merged": "E:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\desk.png",
-        "source": "E:\\EclipseWorkSpace\\AudioRecord\\res\\drawable-xxhdpi\\desk.png"
-    },
-    {
         "merged": "E:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\b3.png",
         "source": "E:\\EclipseWorkSpace\\AudioRecord\\res\\drawable-xxhdpi\\b3.png"
+    },
+    {
+        "merged": "E:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\desk.png",
+        "source": "E:\\EclipseWorkSpace\\AudioRecord\\res\\drawable-xxhdpi\\desk.png"
     }
 ]
