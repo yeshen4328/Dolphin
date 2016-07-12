@@ -75,14 +75,13 @@ public class DataExtractionLine implements Runnable
 				tmpReadData = share.take();
 				resize(decodeArea.length + tmpReadData.length);
 			}
-			//
 			long start = System.currentTimeMillis();
 			step = _math.copyByIndex(decodeArea, leftP, rightP);			
 			Y = ft.fft(step);	
 			A = _math.cAbs(Y);	 
 			window = _math.copyByIndex(A, _math.round(startPoint), _math.round(startPoint + peakDis * 2) - 1);
 			double[] windowPow2 = _math.sqrArray(window);
-			double pks = _math.sum(_math.copyByIndex(windowPow2, _math.round(2*peakDis/3 ), _math.round(4*peakDis/3) - 1));
+ 			double pks = _math.sum(_math.copyByIndex(windowPow2, _math.round(2*peakDis/3 ), _math.round(4*peakDis/3) - 1));
 			double mean = (_math.sum(windowPow2) - pks) / 2;
 			double PAPR = pks / mean;
 			if (pre_flag)
@@ -90,7 +89,6 @@ public class DataExtractionLine implements Runnable
 				if(PAPR >  4 && pks > 1)
 				{
 					int le = _math.round(5000 * prepks / (prepks + pks)) + 1500;
-					//int re = _math.round(5000 * pks / (prepks + pks)) + 1350;
 					double[] tmp = decodeArea.clone();
 					decodeArea = _math.copyByIndex(tmp, leftP - le - 1, tmp.length - 1);				
 				}

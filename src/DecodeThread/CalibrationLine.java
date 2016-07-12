@@ -10,6 +10,7 @@ public class CalibrationLine implements Runnable
 	SharedData share = null;
     private int NN = _math.NN;  
     private int KK = _math.KK;
+    private int SS = _math.SS;
     int[] tmpReadData = null;
     int[] decodeArea = null;
 	public CalibrationLine(CalibrateData cali, SharedData share) 
@@ -28,12 +29,16 @@ public class CalibrationLine implements Runnable
 		int size = 0;
 		decodeArea = cali.take();
 		size += decodeArea.length;
-		int[] window = new int[NN];
-		byte[][] msgs = new byte[5][KK];
+		
+		int[] block = new int[NN];//一个block的数据，包括NN个码字
+		byte[][] msgs = new byte[SS][KK - 1];//msgs为一个set中所含有的5 *（NN - 1）个信息码
 		int errorNum = 0, errorPos = 0;
 		while(!cali.isEmpty() || !cali.isFinish())
 		{
-			while(size < 5 * (NN + 1) && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到5 NN + 1字节，用于后面rs解码
+			/*
+			 * 一次读取一个set的数据
+			 */
+			while(size < SS * NN  && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到5 NN + 1字节，用于后面rs解码
 			{
 				tmpReadData = cali.take();
 				resize(tmpReadData.length + decodeArea.length);
@@ -41,29 +46,40 @@ public class CalibrationLine implements Runnable
 			}
 			if(cali.isFinish() && cali.isEmpty())
 				break;
-
-			for(int i = 0; i < 5; i++)//处理5个block,信息码放在windows中，解码的信息放在msgs中
+			/*
+			 * 分5次处理每一个block
+			 */
+			for(int i = 0; i < SS; i++)//处理5个block,信息码放在windows中，解码的信息放在msgs中
 			{
-				window = _math.copyByIndex(decodeArea, i * (NN + 1), i * (NN + 1) + NN - 1);//截取前NN字节
-				msgs[i] = rs.rsDecode(window);			
-				byte xorReceived = (byte)decodeArea[(i + 1) * (NN + 1) - 1];
-				if(xorReceived != msgs[i][0])
+				/*
+				 * 1. 读取第i个block；
+				 * 2. 解码block；
+				 * 3. 将有效信息码复制到msgs数组中
+				 * 4. 利用有效信息码计算抑或，与接受到的抑或值对比
+				 */
+				block = _math.copyByIndex(decodeArea, i * NN, i * NN + NN - 1);
+				byte[] rec = rs.rsDecode(block);//直接发返回信息码
+				System.arraycopy(rec, 0, msgs[i], 0, KK - 1);
+				int xor = 0;
+				for(int k = 0; k < KK - 1; k++)
+					xor ^= msgs[i][k];
+				if(xor != rec[KK- 1])
 				{
 					errorNum++;
 					errorPos = i;
 				}
 			}
-			if(errorNum == 1)
+			if(errorNum == 1 && errorPos != SS - 1)
 			{
-				byte tmpXor = 0;
-				for(int i = 0; i < 5; i++)
-					if(errorPos != 4 && i != errorPos)
-						tmpXor ^= msgs[i][0];
-				msgs[errorPos][0] = tmpXor;	
+				int[] xor = new int[KK - 1];		
+				for(int k = 0; k < KK - 1; k++)
+					for(int j = 0; j < 4 && j != errorPos; j++)
+						xor[k] ^= msgs[j][k];
+				System.arraycopy(xor, 0, msgs[errorPos], 0, KK - 1);
 			}
 			
 			int[] tmp = decodeArea.clone();
-			decodeArea = _math.copyByIndex(tmp, 5 * (NN + 1), tmp.length - 1);
+			decodeArea = _math.copyByIndex(tmp, SS * NN, tmp.length - 1);
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			byte[] msg = combination(msgs);
@@ -102,12 +118,17 @@ public class CalibrationLine implements Runnable
 	}
 	private byte[] combination(byte[][] msg)
 	{
-		byte[] out = new byte[msg.length/2];
-		byte[] merge = new byte[4 * KK];
-		for(int i = 0; i < 4; i++)
-			System.arraycopy(msg[i], 0, merge, i*KK, KK);
+		/*把msg中的码字合并为字节
+		 * out为最后输出的数组，长度：所有码字的一半
+		 * merge为msg中元素平铺后的数组
+		 * 
+		 */
+		byte[] out = new byte[(SS - 1) * (KK - 1) / 2];
+		byte[] merge = new byte[(SS - 1) * (KK - 1)];
+		for(int i = 0; i < SS - 1; i++)
+			System.arraycopy(msg[i], 0, merge, i * (KK - 1), KK - 1);
 		
-		for(int i = 0, j =0; i < merge.length; i+=2, j++)
+		for(int i = 0, j = 0; i < merge.length; i+=2, j++)
 		{
 			out[j] = (byte)((merge[i] & 0xf) << 4);
 			out[j] ^= (merge[i + 1] & 0xf) ;

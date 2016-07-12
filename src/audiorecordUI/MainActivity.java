@@ -41,8 +41,12 @@ public class MainActivity extends Activity {
     	 public void handleMessage(Message msg){ 
     		 if(msg.what == Status.DECODE_FINISH)
     		 {
-    			 Toast.makeText(MainActivity.this, "decode Finish", Toast.LENGTH_LONG).show();
-    			 
+    			 Toast.makeText(MainActivity.this, "decode Finish", Toast.LENGTH_LONG).show();//显示“解码完成”信息
+    			 if(MainActivity.this.startCliced())//取消按钮点击状态
+        			 MainActivity.this.buttonCancle();
+    			 isFinish = true;//重置标记
+        		 isStart = false;
+    			 return ;
     		 }
     		 else if(msg.what == Status.DISPLAY_MESSAGE)
     		 {
@@ -53,13 +57,13 @@ public class MainActivity extends Activity {
     			 }
     			 Bundle bundle = msg.getData();
     			 String str = bundle.getString("intro");
-    			 //intro.setText(str);
     			 intro.append(str);
+    			 return ;
     		 }
     		 else if(msg.what == Status.WRITING_FINISH)
     			 Toast.makeText(MainActivity.this, "Write Finish", Toast.LENGTH_LONG).show();
     		 else if(msg.what == MenuDialog.RECORD_WRITETOFILE)
-    		 {
+    		 {	 
     			 funcSelect = 1;
     			 hint.setText("Local offline");
     		 }
@@ -73,6 +77,12 @@ public class MainActivity extends Activity {
     			 funcSelect = 3;
     			 hint.setText("Restore the original settings");
     		 }
+    		 /*
+    		  * 每回点击菜单后都重新设置
+    		  */
+    		 if(MainActivity.this.startCliced())
+    			 MainActivity.this.buttonCancle();
+    		 intro.setText("");
     		 isFinish = true;
     		 isStart = false;
     	 }
@@ -106,37 +116,48 @@ public class MainActivity extends Activity {
         @Override  
         public void onClick(View v) 
         {  
-        	Log.i("msg","clicked");
-        	startRecord.trigeAnnimation();
+        	Log.i("msg","clicked"); 	
         	if(!startClicked)
         	{
-	            // TODO Auto-generated method stub        		
-        		startClicked = !startClicked;
+	            // TODO Auto-generated method stub           		
 	        	if(!isStart || isFinish)
-	        	{
-	        		 isStart = true;
-	        		 isFinish = false;
-		             m_recorder = new Saudioclient(mHandler);  
-		             m_recorder.init();
-		             m_recorder.startRecord(funcSelect, sfv);
-		             wave.setTrigger();
-		             wave.postInvalidate();
+	        	{		
+	        		startRecord.trigeAnnimation();
+	        		startClicked = !startClicked;
+	        		isStart = true;
+	        		isFinish = false;
+		            m_recorder = new Saudioclient(mHandler);  
+		            m_recorder.init();
+		            m_recorder.startRecord(funcSelect, sfv);
+		            wave.setTrigger();
+		            wave.postInvalidate();
 	        	}
 	        	else
-	        		Toast.makeText(MainActivity.this, "alread start or not finish", Toast.LENGTH_LONG).show();
+	        		Toast.makeText(MainActivity.this, "already start or not finish", Toast.LENGTH_LONG).show();
         	}
         	else
         	{
-        		startClicked = !startClicked;
-        		m_recorder.stopRecord();
-        		wave.setTrigger();
-        		firsttxt = true;
-                System.out.println("press stop btn");
+        		MainActivity.this.buttonCancle();
         	}
         	
         }          
     }  
-    
+    public boolean startCliced()
+    {
+    	return this.startClicked;
+    }
+    public void buttonCancle()
+    {
+    	startRecord.trigeAnnimation();
+    	
+    	startClicked = !startClicked;
+		m_recorder.stopRecord();
+		wave.setTrigger();
+		firsttxt = true;
+		isFinish = true;
+		isStart = false;
+        System.out.println("press stop btn");
+    }
     class menuListener implements OnClickListener
     {  	  
         @Override  

@@ -64,6 +64,9 @@ public class MenuDialog {
 
 	public void setButton()
 	{
+		/*
+		 * 将音频保存为文件
+		 */
 		ib1 = (ImageButton)window.findViewById(R.id.b1);
 		ib1.setOnClickListener(new Button.OnClickListener(){
 			@Override
@@ -74,6 +77,9 @@ public class MenuDialog {
 			}});
 		ib1.setOnTouchListener(new ButtonSelected());
 //******************************************************************************
+		/*
+		 * 本地解码
+		 */
 		ib2 = (ImageButton)window.findViewById(R.id.b2);
 		ib2.setOnClickListener(new Button.OnClickListener(){
 			@Override
@@ -84,6 +90,9 @@ public class MenuDialog {
 			}});
 		ib2.setOnTouchListener(new ButtonSelected());
 //******************************************************************************		
+		/*
+		 * 实时解码
+		 */
 		ib3 = (ImageButton)window.findViewById(R.id.b3);
 		ib3.setOnClickListener(new Button.OnClickListener(){
 			@Override

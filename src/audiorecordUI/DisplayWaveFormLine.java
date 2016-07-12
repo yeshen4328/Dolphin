@@ -61,7 +61,7 @@ public class DisplayWaveFormLine extends Thread{
 		{			
 			if(sfvWidth - (pos - j + 1) * (lineWidth + gapWidth) < 0)
 				continue;				
-			float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 200 + 4;
+			float volume = (float) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 400 + 4;
 			volume /= 2;
 			volume = (float) Math.floor(volume);
 			int alpha = (int) ((float)(Math.abs(disArray[j]) > threshold ? Math.abs(disArray[j]) : 0) / 32768.0) * 255 + 150;
