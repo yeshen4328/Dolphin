@@ -75,9 +75,6 @@ public class Saudioclient extends Thread {
 	    {
 	    	new Thread(new AudioRecordThread()).start();  
 	    	new Thread(new DataExtractionLine(share)).start();
-	    	
-	    	
-	    	
 	    }
     }
   
@@ -125,8 +122,8 @@ public class Saudioclient extends Thread {
 					}
 			}
 			try {
-				dos.flush();
-				dos.close();
+					dos.flush();
+					dos.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

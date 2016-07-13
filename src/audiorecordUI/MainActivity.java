@@ -32,7 +32,6 @@ public class MainActivity extends Activity {
     private static final String DataName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt";
     private static final String RAWDATANAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.raw";
     protected Saudioclient m_recorder ;
-    boolean isFinish = false, isStart = false;
     int funcSelect = 3;
     boolean startClicked = false;
     boolean firsttxt = true;
@@ -46,8 +45,6 @@ public class MainActivity extends Activity {
     			 Toast.makeText(MainActivity.this, "decode Finish", Toast.LENGTH_LONG).show();//显示“解码完成”信息
     			 if(MainActivity.this.startCliced())//取消按钮点击状态
         			 MainActivity.this.buttonCancle();
-    			 isFinish = true;//重置标记
-        		 isStart = false;
     			 return ;
     		 }
     		 else if(msg.what == Status.DISPLAY_MESSAGE)
@@ -85,8 +82,6 @@ public class MainActivity extends Activity {
     		 if(MainActivity.this.startCliced())
     			 MainActivity.this.buttonCancle();
     		 intro.setText("");
-    		 isFinish = true;
-    		 isStart = false;
     	 }
     };
 	@SuppressLint("ClickableViewAccessibility")
@@ -121,21 +116,14 @@ public class MainActivity extends Activity {
         	Log.i("msg","clicked"); 	
         	if(!startClicked)
         	{
-	            // TODO Auto-generated method stub           		
-	        	if(!isStart || isFinish)
-	        	{		
-	        		startRecord.trigeAnnimation();
-	        		startClicked = !startClicked;
-	        		isStart = true;
-	        		isFinish = false;
-		            m_recorder = new Saudioclient(mHandler);  
-		            m_recorder.init();
-		            m_recorder.startRecord(funcSelect, sfv);
-		            wave.setTrigger();
-		            wave.postInvalidate();
-	        	}
-	        	else
-	        		Toast.makeText(MainActivity.this, "already start or not finish", Toast.LENGTH_LONG).show();
+	            // TODO Auto-generated method stub
+				startRecord.trigeAnnimation();
+				startClicked = !startClicked;
+				m_recorder = new Saudioclient(mHandler);
+				m_recorder.init();
+				m_recorder.startRecord(funcSelect, sfv);
+				wave.setTrigger();
+				wave.postInvalidate();
         	}
         	else
         	{
@@ -156,8 +144,6 @@ public class MainActivity extends Activity {
 		m_recorder.stopRecord();
 		wave.setTrigger();
 		firsttxt = true;
-		isFinish = true;
-		isStart = false;
         System.out.println("press stop btn");
     }
     class menuListener implements OnClickListener

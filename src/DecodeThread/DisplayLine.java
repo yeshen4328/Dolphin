@@ -23,38 +23,8 @@ public class DisplayLine implements Runnable
 		{
 			if(decodeArea == null)
 				decodeArea = display.take();
-			else
-			{
-				byte[] tmp = display.take();
-				decodeArea = _math.mergeArray(decodeArea, tmp);
-			}
-			
-			int count = 0;
-			while(count < decodeArea.length)
-			{
-				if(true || decodeArea[count] == 44 || decodeArea[count] == 46)
-				{
-					byte[] tmp = _math.copyByIndex(decodeArea, 0, count);
-					
-					share.displayInfo(new String(tmp));
-					try {
-							Thread.sleep(1);
-
-					} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					}
-					if(count < decodeArea.length - 1)
-						decodeArea = _math.copyByIndex(decodeArea, count + 1, decodeArea.length - 1);
-					else
-					{
-						decodeArea = null;
-						break;
-					}
-					count = 0;
-				}
-				count++;
-			}
+			share.displayInfo(new String(decodeArea));
+			decodeArea = null;
 		}
 		Log.i("msg", "display finish");
 		//share.displayInfo("display finish");

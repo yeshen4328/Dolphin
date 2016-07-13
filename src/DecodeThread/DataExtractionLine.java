@@ -55,7 +55,8 @@ public class DataExtractionLine implements Runnable
 		// TODO Auto-generated method stub
 		int firstCheck = 0, stepLen = 5000, leftP = 0, rightP = 0, preamble = 0, preNum = _math.round(fs * preTime);
 		double N = Math.pow(2,_math.nextpow2(5000));
-		double peakDis = 100* N/ fs, startPoint = 198 * peakDis, prepks = 0;
+		//198改为193
+		double peakDis = 100* N/ fs, startPoint = 193 * peakDis, prepks = 0;
 		boolean pre_flag = false;
 		double[] step , A, window;
 		Mfft ft = new Mfft((int)N);
@@ -86,7 +87,7 @@ public class DataExtractionLine implements Runnable
 			double PAPR = pks / mean;
 			if (pre_flag)
 			{
-				if(PAPR >  4 && pks > 1)
+				if(PAPR >  6&& pks > 1)
 				{
 					int le = _math.round(5000 * prepks / (prepks + pks)) + 1500;
 					double[] tmp = decodeArea.clone();
@@ -99,7 +100,7 @@ public class DataExtractionLine implements Runnable
 				}
 				break;
 			}
-			if(PAPR >  4 && pks > 1)
+			if(PAPR >  6 && pks > 1)
 			{
 				pre_flag = true;
 				prepks = pks;
@@ -129,7 +130,8 @@ public class DataExtractionLine implements Runnable
 		N = Math.pow(2,_math.nextpow2(preNum));
 		ft = new Mfft((int)N);
 		peakDis = 100 *  N/ fs;
-		startPoint = 19800 * N / fs + 2 *  peakDis / 3;
+		//19800改为19300
+		startPoint = 19300 * N / fs + 2 *  peakDis / 3;
 		double[] pksSequence = new double[31];
 		double[] temp;	
 		double energy = 0;	
