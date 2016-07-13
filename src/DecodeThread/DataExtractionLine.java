@@ -87,7 +87,7 @@ public class DataExtractionLine implements Runnable
 			double PAPR = pks / mean;
 			if (pre_flag)
 			{
-				if(PAPR >  6&& pks > 1)
+				if(PAPR >  6 && pks > 0.4)
 				{
 					int le = _math.round(5000 * prepks / (prepks + pks)) + 1500;
 					double[] tmp = decodeArea.clone();
@@ -100,7 +100,7 @@ public class DataExtractionLine implements Runnable
 				}
 				break;
 			}
-			if(PAPR >  6 && pks > 1)
+			if(PAPR >  6 && pks > 0.4)
 			{
 				pre_flag = true;
 				prepks = pks;
@@ -207,7 +207,7 @@ public class DataExtractionLine implements Runnable
 		}
 		
 		int loc2 = _math.maxLoc(pkSquence2);
-		preamble =   5*(loc2) + 4850;
+		preamble =  5 * (loc2) + 4850;
 		decodeArea = _math.copyByIndex(decodeArea, (int)preamble, decodeArea.length - 1);
 		long end = System.currentTimeMillis();
 		Log.i("time","preamble2:" + Long.toString(end - start));
