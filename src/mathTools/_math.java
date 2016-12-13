@@ -1,6 +1,14 @@
 package mathTools;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.security.Key;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+
 public class _math {
 	public static double[] avgP = {1.09099550356925, 1.01408538081358, 0.845503315726639, 1.41793270648472, 1.15783500369121, 1.25605168547745, 1.13879298599384,
 	1.45977108883758, 1.53727259796955, 1.35503979815522, 1.42518983114684, 1.45528452685480, 1.98129170867238, 2.44365593280276, 2.70328379981867, 2.83117451081866,
@@ -23,9 +31,79 @@ public class _math {
 	public static final int SS = 5;
 	public static final int MM = 4;
 	public static final int NN = 15;  
-	public static final int KK = 3;  
+	public static  int KK = 3;
 	public static final int TT = (NN - KK) / 2; 
-	public static final int[] pp = {1,1,0,0,1}; 
+	public static final int[] pp = {1,1,0,0,1};
+	public static final int KEY_LENGTH = 16;
+/**
+ *
+ *
+ *
+ *
+ */
+
+	public static byte[] int2byte(int[] data)
+	{
+		byte[] out = new byte[data.length];
+		for(int i = 0; i < data.length; i++)
+			out[i] = (byte) data[i];
+		return out;
+	}
+	public static String[] read(String path)
+	{
+		FileInputStream fis;
+		String[] strs = null;
+
+		try {
+			fis = new FileInputStream(new File(path));
+			int size = fis.available();
+			byte[] bytes = new byte[size];
+			fis.read(bytes);
+			String str = new String(bytes, "UTF-8").trim();
+			strs = str.split(" ");
+			fis.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return strs;
+	}
+	public static byte[] readBytes(String path)
+	{
+		byte[] bytes = null;
+		String[] strs = read(path);
+		bytes = new byte[strs.length];
+		for(int i = 0; i < strs.length; i++) bytes[i] = Byte.parseByte(strs[i]);//再把字符串转为数值
+		return bytes;
+	}
+	public static int[] decrypt_EC(byte[] data, byte[] key)
+	{
+		int[] out = null;
+		try {
+				byte[] result = decrypt(data, key);
+				out = new int[result.length];
+				for(int i = 0; i < out.length; i++) out[i] = (int) result[i];
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return out;
+	}
+
+	public static byte[] decrypt(byte[] data, byte[] key) throws Exception
+	{
+		byte[] out =  decrypt(data, new SecretKeySpec(key,"AES"),"AES/ECB/PKCS5Padding");
+		return out == null ? new byte[0] : out;
+	}
+	public static byte[] decrypt(byte[] data, Key key, String cipherAlgorithm) throws Exception{
+		//实例化
+		Cipher cipher = Cipher.getInstance(cipherAlgorithm);
+		//使用密钥初始化，设置为解密模式
+		cipher.init(Cipher.DECRYPT_MODE, key);
+		//执行操作
+		return cipher.doFinal(data);
+	}
 	public static byte[] intToByteA(int[] src)
 	{
 		byte[] des = new byte[src.length];
@@ -199,7 +277,7 @@ public class _math {
 	public static short[] copyByIndex(short[] src, int start, int end){
 		short[] copy = new short[end - start + 1];
 		if (copy.length == 0)
-			return null;
+			return new short[0];
 		if(end >= src.length)
 			try {
 					throw new copyByIndexOutOfIndex();
@@ -213,7 +291,7 @@ public class _math {
 	public static byte[] copyByIndex(byte[] src, int start, int end){
 		byte[] copy = new byte[end - start + 1];
 		if (copy.length == 0)
-			return null;
+			return new byte[0];
 		if(end >= src.length)
 			try {
 					throw new copyByIndexOutOfIndex();

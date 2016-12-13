@@ -20,6 +20,7 @@ public class DataExtractionLine implements Runnable
 	int para = 32;
 	double fs = 44100;
 	double preTime = 0.11;
+	int carrierWid = 90;
 	CalibrateData cali = new CalibrateData();
 	public DataExtractionLine(SharedData share)
 	{
@@ -56,7 +57,7 @@ public class DataExtractionLine implements Runnable
 		int firstCheck = 0, stepLen = 5000, leftP = 0, rightP = 0, preamble = 0, preNum = _math.round(fs * preTime);
 		double N = Math.pow(2,_math.nextpow2(5000));
 		//198改为193
-		double peakDis = 100* N/ fs, startPoint = 193 * peakDis, prepks = 0;
+		double peakDis = 100 * N/ fs, startPoint = 193 * peakDis, prepks = 0;
 		boolean pre_flag = false;
 		double[] step , A, window;
 		Mfft ft = new Mfft((int)N);
@@ -227,11 +228,11 @@ public class DataExtractionLine implements Runnable
 	}
 	private void decode()
 	{
-		// TODO Auto-generated method stub	
+		// TODO Auto-generated method stub
 		new Thread(new CalibrationLine(cali, share)).start();
 		boolean flagEstimate = false, flagEmbed = true;
 		byte[] oneWord = new byte[_math.MM];
-		int Ns = 100, para = 60;		
+		int Ns = 100, para = 60, startFre = 15600;		
 		double symbolTime = 0.11;
 		double sigNum_sym = fs * symbolTime;//每个symbol的信号数，采样频率*每个symbol持续时间；
 		double[] sigsPerSymbol = new double[_math.round(sigNum_sym) - 441];//一个symbol的信号
@@ -240,11 +241,11 @@ public class DataExtractionLine implements Runnable
 		byte sig = 0;
 		int N = (int) Math.pow(2,_math.nextpow2(sigsPerSymbol.length));//一个symbol的采样点数
 		Mfft ft = new Mfft(N);
-		double PEAKDIS = Ns * (double)N / (double)fs;//一帧的时间
+		double PEAKDIS = carrierWid * (double)N / (double)fs;//一帧的时间
 		double startPoint = 0, carrierStart = 0;
 		
 		double[] thresholdPAPR = null;
-		double[] window = null;	  
+		double[] window = null;
 		int[] prePAPR = new int[para];
 		for(int i = 0; i < para; i++)prePAPR[i] = 1;
 		byte[] sins = new byte[Ns * para];
@@ -289,7 +290,7 @@ public class DataExtractionLine implements Runnable
 			}*/
 			
 			int[] msg = new int[para / _math.MM];
-			carrierStart = 14000 * N / fs;
+			carrierStart = startFre * N / fs;
 			if(flagEmbed)
 				if(!flagEstimate)
 				{
@@ -298,7 +299,7 @@ public class DataExtractionLine implements Runnable
 				}
 				else
 				{
-					startPoint = carrierStart - (PEAKDIS - 1) / 2;//必须放在该位置
+					startPoint = carrierStart - (PEAKDIS + 1) / 2;//必须放在该位置
 					for(int j = 0, countWord = 0, countBit = 0; j < para; j++)
 					{
 						sig = 0;

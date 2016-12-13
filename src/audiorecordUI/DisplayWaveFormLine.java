@@ -53,7 +53,7 @@ public class DisplayWaveFormLine extends Thread{
 	private void drawWaveForm() 
 	{		
 		Paint paint = new Paint();
-		paint.setColor(Color.WHITE);
+		paint.setColor(Color.rgb(211,47,47));
 		Bitmap bm = Bitmap.createBitmap(sfvWidth, sfvHeight, Config.ARGB_8888);//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法		
 		Canvas bmCanvas = new Canvas(bm);
 		bmCanvas.drawColor(Color.TRANSPARENT,Mode.CLEAR);		

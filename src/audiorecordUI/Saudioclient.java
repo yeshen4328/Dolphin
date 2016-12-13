@@ -44,9 +44,11 @@ public class Saudioclient extends Thread {
     OscilloGraph og = null;
     Handler mHandler;
     SurfaceView sfv = null;
-    public Saudioclient(Handler mhandler)
+	boolean rekey;
+    public Saudioclient(Handler mhandler, boolean rekey)
     {
     	this.mHandler = mhandler;
+		this.rekey = rekey;
     }
     public void init()
     {
@@ -61,6 +63,7 @@ public class Saudioclient extends Thread {
     	m_in_rec.startRecording();   
     	og = new OscilloGraph(sfv);
 	    share = new SharedData(mHandler);
+		share.setRekey(rekey);
 	    if(func == 1)//录音写入文件
 	    {  	
 	    	new Thread(new AudioRecordThread()).start(); 
@@ -152,8 +155,7 @@ public class Saudioclient extends Thread {
                  	//dis.run(dataInShort);
                  }
              }        
-         }   
- 	 
+         }
     }
     
     

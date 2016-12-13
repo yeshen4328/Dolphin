@@ -17,10 +17,14 @@ import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
+import mathTools._math;
 /*
 	本版本包含有rs纠错和二重纠错，之前几个版本的二重纠错是错误的。
  */
@@ -29,6 +33,8 @@ public class MainActivity extends Activity {
     private RecordWave wave;
     private ImageButton menu;  
     private TextView intro, hint;
+	private EditText rsK;
+	private ToggleButton rekeySwitch;
     private static final String DataName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt";
     private static final String RAWDATANAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.raw";
     protected Saudioclient m_recorder ;
@@ -76,6 +82,12 @@ public class MainActivity extends Activity {
     			 funcSelect = 3;
     			 hint.setText("Restore the original settings");
     		 }
+			 else if(msg.what == Status.TOASTSTATUS)
+			 {
+				 Bundle bundle = msg.getData();
+				 String str = bundle.getString("toast");
+				 Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+			 }
     		 /*
     		  * 每回点击菜单后都重新设置
     		  */
@@ -106,20 +118,25 @@ public class MainActivity extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         sh = (short) dm.heightPixels;
         sw = (short) dm.widthPixels;
+		rsK = (EditText)findViewById(R.id.rsKK);
+		rekeySwitch = (ToggleButton) findViewById(R.id.rekeySwitch);
 	}
 
     class startRecordListener implements OnClickListener
     {  
         @Override  
         public void onClick(View v) 
-        {  
+        {
+			int kk =Integer.parseInt(rsK.getText().toString());
+			_math.KK = kk;
         	Log.i("msg","clicked"); 	
         	if(!startClicked)
         	{
 	            // TODO Auto-generated method stub
 				startRecord.trigeAnnimation();
 				startClicked = !startClicked;
-				m_recorder = new Saudioclient(mHandler);
+				boolean rekey = rekeySwitch.isChecked();
+				m_recorder = new Saudioclient(mHandler, rekey);
 				m_recorder.init();
 				m_recorder.startRecord(funcSelect, sfv);
 				wave.setTrigger();

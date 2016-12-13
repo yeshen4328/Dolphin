@@ -14,11 +14,13 @@ public class CalibrationLine implements Runnable
     private int SS = _math.SS;
     int[] tmpReadData = null;
     int[] decodeArea = null;
+	boolean rekey = false;
 	public CalibrationLine(CalibrateData cali, SharedData share) 
 	{
 		// TODO Auto-generated constructor stub
 		this.cali = cali;
 		this.share = share;
+
 	}
 	@Override
 	public void run()
@@ -28,18 +30,24 @@ public class CalibrationLine implements Runnable
 		new Thread(new DisplayLine(share, display)).start();
 		RsCoder rs = new RsCoder();
 		int size = 0;
+		int bufferLength  = 0;
 		decodeArea = cali.take();
 		size += decodeArea.length;
 		
-		int[] block = new int[NN];//一个block的数据，包括NN个码字
-		
+		byte[] eblock;//一个block的数据，包括NN个码字
+		int[] block = null;
 		int errorNum = 0, errorPos = 0;
+
+		bufferLength = SS * NN;
+
 		while(!cali.isEmpty() || !cali.isFinish())
 		{
 			/*
 			 * 一次读取一个set的数据
+			 * 一个set包含SS*KEY_LEGNTH个字节，每个KEY_LENGTH字节解密出来刚好等于NN字节
+			 * SS*NN字节则能用于一次二重接错
 			 */
-			while(size < SS * NN  && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到5 NN + 1字节，用于后面rs解码
+			while(size < bufferLength  && (!cali.isFinish() || !cali.isEmpty()))//填充缓冲区一直到大于5*key_length字节，用于后面aes解密和rs解码
 			{
 				tmpReadData = cali.take();
 				resize(tmpReadData.length + decodeArea.length);
@@ -59,9 +67,10 @@ public class CalibrationLine implements Runnable
 				 * 3. 将有效信息码复制到msgs数组中
 				 * 4. 利用有效信息码计算抑或，与接受到的抑或值对比
 				 */
+
 				block = _math.copyByIndex(decodeArea, i * NN, i * NN + NN - 1);
 				byte[] rec = rs.rsDecode(block);//直接发返回信息码
-				System.arraycopy(rec, 0, msgs[i], 0, KK - 1);
+				System.arraycopy(rec, 0, msgs[i], 0, KK - 1);//有一个用来二重纠错
 				int xor = 0;
 				for(int k = 0; k < KK - 1; k++)
 					xor ^= msgs[i][k];
@@ -87,7 +96,7 @@ public class CalibrationLine implements Runnable
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			byte[] msg = combination(msgs);
-			
+
 			display.put(msg);
 		}
 		Log.i("msg","cali finish");

@@ -12,6 +12,7 @@ public class SharedData
 	LinkedBlockingQueue<short[]> dataQueue = new LinkedBlockingQueue<short[]>();
 	Handler mhandler;
 	volatile boolean finish = false;
+	boolean rekey = false;
 	public SharedData(Handler mhandler)
 	{
 		// TODO Auto-generated constructor stub
@@ -34,7 +35,7 @@ public class SharedData
 				data = dataQueue.take();
 				dataInDouble = new double[data.length];
 				for(int i = 0; i < data.length; i++)
-					dataInDouble[i] = (double)data[i]/ 32768.0;
+					dataInDouble[i] = (double)data[i] / 32768.0;
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -53,6 +54,14 @@ public class SharedData
 			e.printStackTrace();
 		}
 		return data;
+	}
+	public void setRekey(boolean b)
+	{
+		rekey = b;
+	}
+	public boolean getRekey()
+	{
+		return rekey;
 	}
 	public synchronized boolean isEmpty()
 	{
@@ -80,6 +89,15 @@ public class SharedData
 		Bundle bundle = new Bundle();
 		bundle.putString("intro", str);
 		msg.what = Status.DISPLAY_MESSAGE;
+		msg.setData(bundle);
+		mhandler.sendMessage(msg);
+	}
+	public void toast(String str)
+	{
+		Message msg = new Message();
+		Bundle bundle = new Bundle();
+		bundle.putString("toast", str);
+		msg.what = Status.TOASTSTATUS;
 		msg.setData(bundle);
 		mhandler.sendMessage(msg);
 	}
