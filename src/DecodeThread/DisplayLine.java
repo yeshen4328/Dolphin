@@ -1,4 +1,7 @@
 package DecodeThread;
+/**
+ * v6.0
+ */
 
 import android.util.Log;
 
