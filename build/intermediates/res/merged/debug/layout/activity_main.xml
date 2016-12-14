@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/desk2"
+    android:background="@drawable/desk5"
     tools:context="audiorecordUI.MainActivity" >
    <TextView 
        android:id = "@+id/hint"
@@ -37,7 +37,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
  	android:layout_alignParentBottom ="true"
- 	android:layout_marginBottom="11dp"
+ 	
     >
     <FrameLayout
         android:layout_width = "wrap_content"
@@ -57,6 +57,24 @@
 		      android:layout_gravity="center"
 		  />
 	 </FrameLayout>
+	 <FrameLayout
+	     android:layout_width="100dp"
+		 android:layout_height="26dp"
+		 android:layout_alignParentLeft="true"
+		 android:layout_marginTop="125dp"
+		 android:background="@drawable/k"
+	      >
+	  <EditText
+		  android:id="@+id/rsKK"
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent"
+		  android:layout_alignParentLeft="true"
+		  android:background="@android:color/transparent"
+		  android:layout_marginLeft="30dp"
+		  android:textColor="@android:color/white"
+		  
+		  />
+	  </FrameLayout>
 	 <ImageButton 
 	      android:id="@+id/menu"
 	      android:layout_width="30dp"

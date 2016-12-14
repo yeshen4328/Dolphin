@@ -87,7 +87,6 @@ public class CalibrationLine implements Runnable
 			size = decodeArea.length;
 			//rs解码得到校验后的数据
 			byte[] msg = combination(msgs);
-			
 			display.put(msg);
 		}
 		Log.i("msg","cali finish");

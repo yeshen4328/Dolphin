@@ -35,20 +35,21 @@ public final class R {
         public static final int startbutton_tostop=0x7f020011;
     }
     public static final class id {
-        public static final int action_settings=0x7f080011;
-        public static final int b1=0x7f08000f;
-        public static final int b1txt=0x7f080010;
-        public static final int b2=0x7f08000c;
-        public static final int b2txt=0x7f08000d;
-        public static final int b3=0x7f080009;
-        public static final int b4txt=0x7f08000a;
+        public static final int action_settings=0x7f080012;
+        public static final int b1=0x7f080010;
+        public static final int b1txt=0x7f080011;
+        public static final int b2=0x7f08000d;
+        public static final int b2txt=0x7f08000e;
+        public static final int b3=0x7f08000a;
+        public static final int b4txt=0x7f08000b;
         public static final int bottom=0x7f080003;
-        public static final int franme1=0x7f08000e;
-        public static final int franme2=0x7f08000b;
-        public static final int franme3=0x7f080008;
+        public static final int franme1=0x7f08000f;
+        public static final int franme2=0x7f08000c;
+        public static final int franme3=0x7f080009;
         public static final int hint=0x7f080000;
         public static final int intro=0x7f080001;
-        public static final int menu=0x7f080007;
+        public static final int menu=0x7f080008;
+        public static final int rsKK=0x7f080007;
         public static final int soundWave=0x7f080002;
         public static final int start=0x7f080006;
         public static final int wave=0x7f080005;

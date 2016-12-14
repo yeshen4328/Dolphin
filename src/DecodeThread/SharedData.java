@@ -34,7 +34,7 @@ public class SharedData
 				data = dataQueue.take();
 				dataInDouble = new double[data.length];
 				for(int i = 0; i < data.length; i++)
-					dataInDouble[i] = (double)data[i]/ 32768.0;
+					dataInDouble[i] = (double)data[i] / 32768.0;
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,9 +1,6 @@
 package audiorecordUI;
 
 import mathTools.Status;
-
-import com.example.audiorecord.R;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.PixelFormat;
@@ -17,10 +14,12 @@ import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.audiorecord.R;
+import mathTools._math;
 /*
 	本版本包含有rs纠错和二重纠错，之前几个版本的二重纠错是错误的。
  */
@@ -29,6 +28,7 @@ public class MainActivity extends Activity {
     private RecordWave wave;
     private ImageButton menu;  
     private TextView intro, hint;
+	private EditText rsK;
     private static final String DataName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt";
     private static final String RAWDATANAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.raw";
     protected Saudioclient m_recorder ;
@@ -88,7 +88,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);	
+		setContentView(R.layout.activity_main);
 		sfv = (SurfaceView)findViewById(R.id.soundWave);
 		sfv.setZOrderOnTop(true);
 		sfv.getHolder().setFormat(PixelFormat.TRANSLUCENT);
@@ -106,13 +106,16 @@ public class MainActivity extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         sh = (short) dm.heightPixels;
         sw = (short) dm.widthPixels;
+		rsK = (EditText)findViewById(R.id.rsKK);
 	}
 
     class startRecordListener implements OnClickListener
     {  
         @Override  
         public void onClick(View v) 
-        {  
+        {
+			int kk =Integer.parseInt(rsK.getText().toString());
+			_math.KK = kk;
         	Log.i("msg","clicked"); 	
         	if(!startClicked)
         	{
