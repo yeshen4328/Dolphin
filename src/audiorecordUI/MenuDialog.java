@@ -12,12 +12,11 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
+import mathTools.Status;
+
 
 public class MenuDialog {
-	public static final int LOCAL_OFFLINE_DECODE = 3;
-	public static final int LOCAL_REALTIME_DECODE = 4;
-	public static final int RECORD_REALTIME_DECODE = 5;
-	public static final int RECORD_WRITETOFILE = 6;
+
 	Context context;
 	Window window ;
 	private AlertDialog ad;
@@ -72,7 +71,7 @@ public class MenuDialog {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mHandler.sendEmptyMessage(RECORD_WRITETOFILE);
+				mHandler.sendEmptyMessage(Status.RECORD_WRITETOFILE);
 				ad.dismiss();
 			}});
 		ib1.setOnTouchListener(new ButtonSelected());
@@ -85,7 +84,7 @@ public class MenuDialog {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mHandler.sendEmptyMessage(LOCAL_REALTIME_DECODE);
+				mHandler.sendEmptyMessage(Status.LOCAL_REALTIME_DECODE);
 				ad.dismiss();
 			}});
 		ib2.setOnTouchListener(new ButtonSelected());
@@ -98,7 +97,7 @@ public class MenuDialog {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				mHandler.sendEmptyMessage(RECORD_REALTIME_DECODE);
+				mHandler.sendEmptyMessage(Status.RECORD_REALTIME_DECODE);
 				ad.dismiss();
 			}});
 		ib3.setOnTouchListener(new ButtonSelected());

@@ -61,17 +61,17 @@ public class MainActivity extends Activity {
     		 }
     		 else if(msg.what == Status.WRITING_FINISH)
     			 Toast.makeText(MainActivity.this, "Write Finish", Toast.LENGTH_LONG).show();
-    		 else if(msg.what == MenuDialog.RECORD_WRITETOFILE)
+    		 else if(msg.what == Status.RECORD_WRITETOFILE)
     		 {	 
     			 funcSelect = 1;
     			 hint.setText("Local offline");
     		 }
-    		 else if(msg.what == MenuDialog.LOCAL_REALTIME_DECODE)
+    		 else if(msg.what == Status.LOCAL_REALTIME_DECODE)
     		 {
     			 funcSelect = 2;
     			 hint.setText("Local decoding");
     		 }
-    		 else if(msg.what == MenuDialog.RECORD_REALTIME_DECODE)
+    		 else if(msg.what ==Status.RECORD_REALTIME_DECODE)
     		 {
     			 funcSelect = 3;
     			 hint.setText("Restore the original settings");
@@ -82,12 +82,13 @@ public class MainActivity extends Activity {
 				 String str = bundle.getString("toast");
 				 Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
 			 }
+
     		 /*
     		  * 每回点击菜单后都重新设置
     		  */
     		 if(MainActivity.this.startCliced())
     			 MainActivity.this.buttonCancle();
-    		 intro.setText("");
+
     	 }
     };
 	@SuppressLint("ClickableViewAccessibility")
@@ -126,6 +127,7 @@ public class MainActivity extends Activity {
         	if(!startClicked)
         	{
 	            // TODO Auto-generated method stub
+
 				startRecord.trigeAnnimation();
 				startClicked = !startClicked;
 				m_recorder = new Saudioclient(mHandler);

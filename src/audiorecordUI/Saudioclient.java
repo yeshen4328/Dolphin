@@ -63,6 +63,7 @@ public class Saudioclient extends Thread {
     	og = new OscilloGraph(sfv);
 	    share = new SharedData(mHandler);
 		share.setRekey(rekey);
+		//share.setStatus(Status.START_CLEAR);
 	    if(func == 1)//录音写入文件
 	    {  	
 	    	new Thread(new AudioRecordThread()).start(); 
