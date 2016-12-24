@@ -1,12 +1,19 @@
 package mathTools;
 
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.security.Key;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
 
 import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 public class _math {
@@ -41,6 +48,18 @@ public class _math {
  *
  *
  */
+public static byte[] getRawKey(byte[] seed) throws Exception {
+	/*KeyGenerator kgen = KeyGenerator.getInstance("AES");
+	SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
+	sr.setSeed(seed);
+	kgen.init(128, sr); // 192 and 256 bits may not be available
+	SecretKey skey = kgen.generateKey();
+	byte[] raw = skey.getEncoded();*/
+	MessageDigest md5 = MessageDigest.getInstance("MD5");
+	md5.update(seed);
+	byte[] raw = md5.digest();//加密
+	return raw;
+}
 
 	public static byte[] int2byte(int[] data)
 	{

@@ -10,13 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedea74d-4b5e-4f0b-b3e8-7c5f8f362b3e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-v14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values-w820dp-v13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AudioRecord.iml" afterPath="$PROJECT_DIR$/AudioRecord.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mathTools/_math.java" afterPath="$PROJECT_DIR$/src/mathTools/_math.java" />
     </list>
     <ignored path="AudioRecord.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,39 +54,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataExtractionLine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataExtractionLine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
-              <folding>
-                <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-                <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-                <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-                <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="3504">
+              <caret line="240" column="20" selection-start-line="240" selection-start-column="20" selection-end-line="240" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayLine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CalibrationLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="464">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DisplayLine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+            <state relative-caret-position="32">
+              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -764,7 +764,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="E:\EclipseWorkSpace\AudioRecord" value="1481614721826" />
+        <entry key="E:\EclipseWorkSpace\AudioRecord" value="1482310568483" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -953,9 +953,9 @@
         <option value="$PROJECT_DIR$/src/mathTools/Status.java" />
         <option value="$PROJECT_DIR$/src/DecodeThread/SharedData.java" />
         <option value="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" />
-        <option value="$PROJECT_DIR$/src/mathTools/_math.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" />
+        <option value="$PROJECT_DIR$/src/mathTools/_math.java" />
       </list>
     </option>
   </component>
@@ -993,7 +993,6 @@
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1011,9 +1010,74 @@
               <option name="myItemId" value="AudioRecord" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mathTools" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DecodeThread" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1386,12 +1450,12 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.6343612" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.62885463" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.36563876" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.37114537" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22246696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1505,12 +1569,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2816">
           <caret line="401" column="28" selection-start-line="401" selection-start-column="28" selection-end-line="401" selection-end-column="28" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1596,12 +1655,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1634,12 +1688,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1672,12 +1721,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1710,12 +1754,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1794,17 +1833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#read#0;class#_math#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/android-sdk-windows/sources/android-21/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1823,14 +1851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="848">
           <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1861,33 +1881,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3504">
+          <caret line="240" column="20" selection-start-line="240" selection-start-column="20" selection-end-line="240" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="115" column="47" selection-start-line="115" selection-start-column="47" selection-end-line="115" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#read#0;class#_math#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="52" column="54" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+        <state relative-caret-position="-32">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
+        <state relative-caret-position="32">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="239" column="20" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
-          <folding>
-            <element signature="method#preambleLocalization#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#jumpSilence#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#PAPREstimate#0;class#DataExtractionLine#0" expanded="false" />
-            <element signature="method#genfArray#0;class#DataExtractionLine#0" expanded="false" />
           </folding>
         </state>
       </provider>

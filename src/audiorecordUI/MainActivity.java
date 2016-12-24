@@ -1,9 +1,6 @@
 package audiorecordUI;
 
 import mathTools.Status;
-
-import com.example.audiorecord.R;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.PixelFormat;
@@ -19,11 +16,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
+import com.example.audiorecord.R;
 import mathTools._math;
 /*
 	本版本包含有rs纠错和二重纠错，之前几个版本的二重纠错是错误的。
@@ -34,7 +29,6 @@ public class MainActivity extends Activity {
     private ImageButton menu;  
     private TextView intro, hint;
 	private EditText rsK;
-	private ToggleButton rekeySwitch;
     private static final String DataName = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt";
     private static final String RAWDATANAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.raw";
     protected Saudioclient m_recorder ;
@@ -100,7 +94,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);	
+		setContentView(R.layout.activity_main);
 		sfv = (SurfaceView)findViewById(R.id.soundWave);
 		sfv.setZOrderOnTop(true);
 		sfv.getHolder().setFormat(PixelFormat.TRANSLUCENT);
@@ -119,7 +113,6 @@ public class MainActivity extends Activity {
         sh = (short) dm.heightPixels;
         sw = (short) dm.widthPixels;
 		rsK = (EditText)findViewById(R.id.rsKK);
-		rekeySwitch = (ToggleButton) findViewById(R.id.rekeySwitch);
 	}
 
     class startRecordListener implements OnClickListener
@@ -135,8 +128,7 @@ public class MainActivity extends Activity {
 	            // TODO Auto-generated method stub
 				startRecord.trigeAnnimation();
 				startClicked = !startClicked;
-				boolean rekey = rekeySwitch.isChecked();
-				m_recorder = new Saudioclient(mHandler, rekey);
+				m_recorder = new Saudioclient(mHandler);
 				m_recorder.init();
 				m_recorder.startRecord(funcSelect, sfv);
 				wave.setTrigger();

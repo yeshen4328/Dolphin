@@ -45,10 +45,9 @@ public class Saudioclient extends Thread {
     Handler mHandler;
     SurfaceView sfv = null;
 	boolean rekey;
-    public Saudioclient(Handler mhandler, boolean rekey)
+    public Saudioclient(Handler mhandler)
     {
     	this.mHandler = mhandler;
-		this.rekey = rekey;
     }
     public void init()
     {
