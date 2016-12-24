@@ -10,18 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cedea74d-4b5e-4f0b-b3e8-7c5f8f362b3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AudioRecord.iml" afterPath="$PROJECT_DIR$/AudioRecord.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugShaders/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" afterPath="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mathTools/_math.java" afterPath="$PROJECT_DIR$/src/mathTools/_math.java" />
     </list>
     <ignored path="AudioRecord.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +66,8 @@
       <file leaf-file-name="DisplayLine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+            <state relative-caret-position="528">
+              <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1417,7 +1406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481612806990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="attributes-encryption(unlimited length)">
+      <created>1482569491554</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1482569491554</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1486,7 +1482,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="broadcast-encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="broadcast-encryption" />
+    <MESSAGE value="attributes-encryption(unlimited length)" />
+    <option name="LAST_COMMIT_MESSAGE" value="attributes-encryption(unlimited length)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1918,8 +1915,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        <state relative-caret-position="528">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
