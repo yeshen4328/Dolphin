@@ -5,7 +5,9 @@ import mathTools.Complex;
 import mathTools.Status;
 import mathTools._math;
 import mathTools.Mfft;
-
+/**
+ *unlimited-length
+ */
 public class DataExtractionLine implements Runnable
 {
 	SharedData share = null;
