@@ -1,0 +1,4 @@
+#Sat Mar 11 20:22:21 CST 2017
+base.0=E\:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275
+renamed.0=classes.dex
+file.0=E\:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\2\\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275\\classes.dex
