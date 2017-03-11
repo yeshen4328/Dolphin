@@ -1,0 +1,4 @@
+#Sat Mar 11 16:58:11 CST 2017
+base.0=E\:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2
+renamed.0=classes.dex
+file.0=E\:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_2\\classes.dex
