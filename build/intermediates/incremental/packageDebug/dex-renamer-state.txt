@@ -1,4 +1,4 @@
-#Sat Mar 11 16:58:11 CST 2017
+#Tue Mar 14 15:16:30 CST 2017
 base.0=E\:\\EclipseWorkSpace\\AudioRecord\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_67fb74d658c92914f3f3dbfd037b394b721988ce
 renamed.1=classes2.dex
 renamed.0=classes.dex

@@ -6,32 +6,23 @@
     density="xxxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1489222666830"
+    timestamp="1489475784783"
     token="-5260813740574336931"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="4910" />
+        duration="3897" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1440" />
+        duration="0" />
     <task
         name="verifier"
-        duration="384" />
+        duration="0" />
 
-    <artifact
-        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
     <artifact
         location="E:\EclipseWorkSpace\AudioRecord\build\outputs\apk\AudioRecord-debug.apk"
         type="SPLIT_MAIN" />
@@ -45,7 +36,16 @@
         location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
+        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
         location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_1.apk"
         type="SPLIT" />
     <artifact
         location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_7.apk"
@@ -62,17 +62,8 @@
 
     <build
         build-mode="FULL"
-        timestamp="1489222666830"
+        timestamp="1489475784783"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
         <artifact
             location="E:\EclipseWorkSpace\AudioRecord\build\outputs\apk\AudioRecord-debug.apk"
             type="SPLIT_MAIN" />
@@ -86,7 +77,16 @@
             location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
+            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
             location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
             location="E:\EclipseWorkSpace\AudioRecord\build\intermediates\split-apk\debug\slices\slice_7.apk"
