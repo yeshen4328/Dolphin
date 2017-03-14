@@ -30,7 +30,7 @@ public class DisplayLine extends ProcessLine implements Runnable
 		decodeArea = display.take();
 		int size =  decodeArea.length;
 		rekey = share.getRekey();
-		byte id = 12;
+		byte id = 1;
 		byte[] ki = _math.readBytes("/sdcard/dolphin/usrkey.txt");
 		byte[] sk = null;
 		File skfile = new File("/sdcard/dolphin/SK.txt");
