@@ -19,7 +19,8 @@ public class DisplayWaveFormLine extends Thread{
 	short[] disArray;
 	int maxLineNum = 0;
 	BitmapToDisRes bmres = null;
-	
+	Bitmap bm ;//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法
+	Canvas bmCanvas ;
 	public DisplayWaveFormLine(OscilloGraph og) 
 	{
 		// TODO Auto-generated constructor stub
@@ -29,7 +30,9 @@ public class DisplayWaveFormLine extends Thread{
 		sfvWidth = og.getSFVWidth();
 		maxLineNum = sfvWidth / (lineWidth + gapWidth);
 		bmres = new BitmapToDisRes();
-		disArray = new short[maxLineNum];		
+		disArray = new short[maxLineNum];
+		bm = Bitmap.createBitmap(sfvWidth, sfvHeight, Config.ARGB_8888);//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法
+		bmCanvas = new Canvas(bm);
 	}
 
 	@Override
@@ -54,8 +57,7 @@ public class DisplayWaveFormLine extends Thread{
 	{		
 		Paint paint = new Paint();
 		paint.setColor(Color.rgb(211,47,47));
-		Bitmap bm = Bitmap.createBitmap(sfvWidth, sfvHeight, Config.ARGB_8888);//显示波形的线程运行时间太长会导致位图过多而内存溢出，二号方法		
-		Canvas bmCanvas = new Canvas(bm);
+
 		bmCanvas.drawColor(Color.TRANSPARENT,Mode.CLEAR);		
 		for(int j = 0; j <= pos; j++)//绘制第pos个数据前的0到pos个数据
 		{			
@@ -82,6 +84,6 @@ public class DisplayWaveFormLine extends Thread{
 			canvas.drawBitmap(bm, lineWidth + gapWidth - s, 0, paint);
 			og.unlockCanvasAndPost(canvas);
 		}
-		bm.recycle();
+
 	}
 }
