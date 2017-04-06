@@ -1,28 +1,715 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="arraypool" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="arraypool" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cedea74d-4b5e-4f0b-b3e8-7c5f8f362b3e" name="Default" comment="unlimeted_length(beta)">
+    <list default="true" id="cedea74d-4b5e-4f0b-b3e8-7c5f8f362b3e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-05-10-35-30-753.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-09-51-39-433.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-09-51-49-826.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-05-24-830.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-10-12-400.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-15-43-021.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-36-09-733.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-38-11-928.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-11-52-12-731.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-15-40-05-824.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-15-41-58-371.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-15-46-13-913.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-17-40-31-180.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-18-58-50-984.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-19-01-24-519.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-20-04-25-619.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/android-profile/profile-2017-04-06-20-33-36-353.rawproto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/ArrayPool$ShortData.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/ArrayPool.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/LinkedBlockingList$Item.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/LinkedBlockingList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/SharedData2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$AudioRecordThreadWithNoPool.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$WriteToFileWithNoPool.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/debug_c8842c058ec2bff5aed28bc95ea0d2870d173acb.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_11.39.alloc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_11.52.alloc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_15.40.alloc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DecodeThread/ArrayPool.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DecodeThread/LinkedBlockingList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DecodeThread/SharedData2.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-08-30-099.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-08-38-980.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-08-41-207.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-12-36-399.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-12-43-193.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-07-11-12-45-072.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-10-20-18-805.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-10-20-29-247.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-10-20-31-571.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-05-04-651.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-06-54-794.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-07-36-485.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-08-19-166.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-17-17-141.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-18-01-501.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-31-55-807.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-33-36-486.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-35-38-694.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-36-15-467.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-37-35-947.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-37-53-742.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-10-20-42-20-678.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-11-15-22-35-633.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-11-15-22-44-480.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-11-15-22-53-182.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-11-15-22-58-526.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-11-16-57-46-771.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-15-42-517.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-15-44-161.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/android-profile/profile-2017-03-14-15-16-24-773.rawproto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/generated/mockable-android-21.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/AudioProcess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/CalibrateData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/CalibrationLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/DataExtractionLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/DispalyData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/DisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/DecodeThread/SharedData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/BitmapToDisRes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/ButtonSelected.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/ContinuousDisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/DisplayWaveFormLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MainActivity$menuListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MainActivity$startRecordListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MenuDialog$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MenuDialog$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MenuDialog$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/MenuDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/OscilloGraph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/RecordButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/RecordWave.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/Saudioclient$AudioRead.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/Saudioclient$AudioRecordThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/Saudioclient$WriteToFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/audiorecordUI/Saudioclient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/Bswabe$IntegerComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/Bswabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabeCph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabeCphKey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabeElementBoolean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabeMsk.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabePolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabePolynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabePrv.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabePrvComp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/BswabePub.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/bswabe/SerializeUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/example/audiorecord/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/cpabe/AESCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/cpabe/Common.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/cpabe/Cpabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/cpabe/policy/LangPolicy$SortByAlphabetic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/cpabe/policy/LangPolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/io/CustomStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/CurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Element.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/ElementPow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/ElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/FieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Pairing$PairingFieldIdentifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/PairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Polynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/PreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/jpbc/Vector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractFieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractPointElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/curve/ImmutableCurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/gt/ImmutableGTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/AbstractPolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/ImmutablePolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/quadratic/ImmutableQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/vector/ImmutableVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/AbstractZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/ImmutableZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/ZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/ZField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/ZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/field/z/ZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/AbstractPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/DefaultCurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/PairingFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeACurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeAPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap$TypeAMillerAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap$TypeATateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap$TypeATateProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap$TypeA1TateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap$TypeDMillerNoDenomAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeECurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeEPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeETateProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFTateNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$JacobPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$MillerPreProcessingInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap$DummyPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/map/PairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/Arrays.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$InputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$OutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/Base64.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectOutput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/BigDecimalUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/BigFraction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils$TrialDivide.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/HilbertPolyGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/it/unisa/dia/gas/plaf/jpbc/util/math/PellEquation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/DFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/FFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/Mfft.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/RsCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/_math.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/mathTools/copyByIndexOutOfIndex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/file-input-save-data.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageInstantRunResourcesDebug/zip-cache/DYPP3mdD2lXNrwX16CuQBJQq6IA=" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-resources/resources-debug.ir.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/dependencies/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/instant-run.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_3/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_0/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_1/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_2/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_3/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_4/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_5/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_6/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_7/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_8/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/slice_9/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/manifests/instant-run/debug/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/dep/dependencies.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_0.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_1.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_2.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_3.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_4.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_5.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_6.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_7.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_8.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/split-apk/debug/slices/slice_9.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_409dd2e774cdffd0c62d21ab9afb09a483251736/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_67fb74d658c92914f3f3dbfd037b394b721988ce/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/2/android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/AudioProcess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/CalibrateData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/CalibrationLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/DataExtractionLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/DispalyData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/DisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/DecodeThread/SharedData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/BitmapToDisRes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/ButtonSelected.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/ContinuousDisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/DisplayWaveFormLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MainActivity$menuListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MainActivity$startRecordListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MenuDialog$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MenuDialog$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MenuDialog$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/MenuDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/OscilloGraph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/RecordButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/RecordWave.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/Saudioclient$AudioRead.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/Saudioclient$AudioRecordThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/Saudioclient$WriteToFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/audiorecordUI/Saudioclient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/Bswabe$IntegerComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/Bswabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabeCph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabeCphKey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabeElementBoolean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabeMsk.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabePolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabePolynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabePrv.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabePrvComp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/BswabePub.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/bswabe/SerializeUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/example/audiorecord/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/cpabe/AESCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/cpabe/Common.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/cpabe/Cpabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/cpabe/policy/LangPolicy$SortByAlphabetic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/cpabe/policy/LangPolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/io/CustomStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/CurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Element.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/ElementPow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/ElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/FieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Pairing$PairingFieldIdentifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/PairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Polynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/PreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/jpbc/Vector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractFieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractPointElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/curve/ImmutableCurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/gt/ImmutableGTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/AbstractPolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/ImmutablePolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/quadratic/ImmutableQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/vector/ImmutableVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/AbstractZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/ImmutableZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/ZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/ZField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/ZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/field/z/ZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/AbstractPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/DefaultCurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/PairingFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeACurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeAPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap$TypeAMillerAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap$TypeATateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap$TypeATateProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap$TypeA1TateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap$TypeDMillerNoDenomAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeECurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeEPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeETateProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFTateNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$JacobPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$MillerPreProcessingInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap$DummyPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/map/PairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/Arrays.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$InputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$OutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/Base64.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectOutput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/BigDecimalUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/BigFraction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils$TrialDivide.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/HilbertPolyGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/it/unisa/dia/gas/plaf/jpbc/util/math/PellEquation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/DFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/FFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/Mfft.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/RsCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/_math.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/mathTools/copyByIndexOutOfIndex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/AudioProcess.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/CalibrateData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/CalibrationLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/DataExtractionLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/DispalyData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/DisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/DecodeThread/SharedData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/android/tools/fd/dummy/slice_0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/field/quadratic/DegreeTwoExtensionQuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/field/quadratic/ImmutableQuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/field/quadratic/QuadraticField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/AbstractPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/DefaultCurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/PairingFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap$TypeA1TateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/it/unisa/dia/gas/plaf/jpbc/pairing/a1/TypeA1TateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/BitmapToDisRes.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/ButtonSelected.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/ContinuousDisplayLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/DisplayWaveFormLine.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MainActivity$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MainActivity$menuListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MainActivity$startRecordListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MainActivity.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MenuDialog$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MenuDialog$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MenuDialog$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/MenuDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/OscilloGraph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/RecordButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/RecordWave.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/Saudioclient$AudioRead.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/Saudioclient$AudioRecordThread.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/Saudioclient$WriteToFile.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/audiorecordUI/Saudioclient.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/android/tools/fd/dummy/slice_1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/gt/GTFiniteField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/gt/ImmutableGTFiniteElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/vector/ImmutableVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/it/unisa/dia/gas/plaf/jpbc/field/vector/VectorField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/DFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/FFT.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/Mfft.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/RsCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/Status.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/_math.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/mathTools/copyByIndexOutOfIndex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/android/tools/fd/dummy/slice_2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/example/audiorecord/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/AbstractZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/ImmutableZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/SymmetricZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/ZElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/ZField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/ZrElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/it/unisa/dia/gas/plaf/jpbc/field/z/ZrField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/android/tools/fd/dummy/slice_3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/CurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/CurveParameters.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Element.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/ElementPow.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/ElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Field.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/FieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Pairing$PairingFieldIdentifier.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Pairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/PairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Point.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Polynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/PreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/jpbc/Vector.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/field/curve/CurveField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/field/curve/ImmutableCurveElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/pairing/g/TypeGTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/it/unisa/dia/gas/plaf/jpbc/pairing/product/ProductPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/Bswabe$IntegerComparator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/Bswabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabeCph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabeCphKey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabeElementBoolean.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabeMsk.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabePolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabePolynomial.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabePrv.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabePrvComp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/BswabePub.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/bswabe/SerializeUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/android/tools/fd/dummy/slice_4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/f/TypeFTateNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$JacobPoint.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap$MillerPreProcessingInfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap$DummyPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/AbstractPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/pairing/map/PairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/BigDecimalUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/BigFraction.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils$TrialDivide.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/BigIntegerUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/Complex.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/HilbertPolyGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/it/unisa/dia/gas/plaf/jpbc/util/math/PellEquation.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/android/tools/fd/dummy/slice_5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeECurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeEPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/it/unisa/dia/gas/plaf/jpbc/pairing/e/TypeETateProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/android/tools/fd/dummy/slice_6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDCurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap$TypeDMillerNoDenomAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/it/unisa/dia/gas/plaf/jpbc/pairing/d/TypeDTateAffineNoDenomMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/com/android/tools/fd/dummy/slice_7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/cpabe/AESCoder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/cpabe/Common.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/cpabe/Cpabe.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/cpabe/policy/LangPolicy$SortByAlphabetic.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/cpabe/policy/LangPolicy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractElementPowPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractFieldOver.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractPointElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_7/it/unisa/dia/gas/plaf/jpbc/field/base/AbstractVectorElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/com/android/tools/fd/dummy/slice_8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/io/CustomStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/AbstractPolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/ImmutablePolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModElement.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyModField.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/field/poly/PolyUtils.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/Arrays.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$InputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/Base64$OutputStream.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/Base64.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectInput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_8/it/unisa/dia/gas/plaf/jpbc/util/io/PairingObjectOutput.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/buildId.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/com/android/tools/fd/dummy/slice_9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeACurveGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeAPairing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap$TypeAMillerAffinePairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateAffineMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap$TypeATateNafProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateNafProjectiveMillerPairingMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap$TypeATateProjectiveMillerPairingPreProcessing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_9/it/unisa/dia/gas/plaf/jpbc/pairing/a/TypeATateProjectiveMillerPairingMap.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/fileContent/fileContent.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/fileContent/fileContent.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/classAnalysis.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/javaCompile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/javaCompile/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/3.4.1/taskHistory/taskHistory.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/DecodeThread/CalibrationLine.class" afterPath="$PROJECT_DIR$/bin/classes/DecodeThread/CalibrationLine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/DecodeThread/DataExtractionLine.class" afterPath="$PROJECT_DIR$/bin/classes/DecodeThread/DataExtractionLine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/DecodeThread/SharedData.class" afterPath="$PROJECT_DIR$/bin/classes/DecodeThread/SharedData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/DisplayWaveFormLine.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/DisplayWaveFormLine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/OscilloGraph.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/OscilloGraph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$AudioRead.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$AudioRead.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$AudioRecordThread.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$AudioRecordThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$WriteToFile.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient$WriteToFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient.class" afterPath="$PROJECT_DIR$/bin/classes/audiorecordUI/Saudioclient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-17.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-17.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/SharedData.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/DecodeThread/SharedData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/DisplayWaveFormLine.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/DisplayWaveFormLine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/OscilloGraph.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/OscilloGraph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$AudioRead.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$AudioRead.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$AudioRecordThread.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$AudioRecordThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$WriteToFile.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient$WriteToFile.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/audiorecordUI/Saudioclient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/DYPP3mdD2lXNrwX16CuQBJQq6IA=" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/zip-cache/DYPP3mdD2lXNrwX16CuQBJQq6IA=" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/AudioRecord-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/AudioRecord-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AudioRecord.iml" afterPath="$PROJECT_DIR$/AudioRecord.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DecodeThread/SharedData.java" afterPath="$PROJECT_DIR$/src/DecodeThread/SharedData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/DisplayWaveFormLine.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/DisplayWaveFormLine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/OscilloGraph.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/OscilloGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" afterPath="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" />
     </list>
     <ignored path="AudioRecord.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,51 +741,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataExtractionLine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
+      <file leaf-file-name="Saudioclient.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-129">
-              <caret line="270" column="49" selection-start-line="270" selection-start-column="49" selection-end-line="270" selection-end-column="49" />
+            <state relative-caret-position="314">
+              <caret line="227" column="5" selection-start-line="227" selection-start-column="5" selection-end-line="227" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayLine.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
+      <file leaf-file-name="SharedData2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DecodeThread/SharedData2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+            <state relative-caret-position="411">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
-                <element signature="e#4579#4580#0" expanded="false" />
-                <element signature="e#4616#4617#0" expanded="false" />
-                <marker date="1489475732934" expanded="false" signature="31:49" ph="..." />
-                <marker date="1489475732934" expanded="true" signature="4292:4539" ph="{...}" />
+                <element signature="e#286#307#0" expanded="true" />
+                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1800#1801#0" expanded="true" />
+                <marker date="1491479967785" expanded="false" signature="2011:2240" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Saudioclient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
+      <file leaf-file-name="_math.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+            <state relative-caret-position="545">
+              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OscilloGraph.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/audiorecordUI/OscilloGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayPool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DecodeThread/ArrayPool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2889#2890#0" expanded="false" />
-                <element signature="e#2914#2915#0" expanded="false" />
-                <marker date="1489475732936" expanded="true" signature="2398:2851" ph="{...}" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkedBlockingList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DecodeThread/LinkedBlockingList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DecodeThread/SharedData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+              <folding>
+                <element signature="method#takeRaw#0;class#SharedData#0" expanded="false" />
+                <element signature="method#displayInfo#0;class#SharedData#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -110,6 +827,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="ASClass" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,6 +844,9 @@
         <option name="title" value="Current Branch" />
       </GitPushTagMode>
     </option>
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="V5.4(beta)" target-remote="origin" target-branch="V5.4(beta)" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -823,7 +1544,7 @@
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$" value="1489475218330" />
-        <entry key="E:\EclipseWorkSpace\AudioRecord" value="1489475730654" />
+        <entry key="E:\EclipseWorkSpace\AudioRecord" value="1491359722719" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -838,13 +1559,13 @@
                       <ExternalModuleBuildClasspathPojo>
                         <option name="entries">
                           <list>
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.0/gradle-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.0/gradle-core-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.0/builder-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.0/lint-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle/2.3.1/gradle-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-core/2.3.1/gradle-core-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder/2.3.1/builder-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint/25.3.1/lint-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/transform-api/2.0.0-deprecated-use-gradle-api/transform-api-2.0.0-deprecated-use-gradle-api.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.0/gradle-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.0/compilerCommon-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/gradle-api/2.3.1/gradle-api-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/compilerCommon/2.3.1/compilerCommon-2.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-commons/5.0.4/asm-commons-5.0.4.jar" />
@@ -853,41 +1574,41 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/jacoco/org.jacoco.report/0.7.5.201505241946/org.jacoco.report-0.7.5.201505241946.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/jopt-simple/jopt-simple/4.9/jopt-simple-4.9.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.0/builder-model-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.0/builder-test-api-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.0/sdklib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.0/sdk-common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.0/common-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.0/manifest-merger-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.0/ddmlib-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-model/2.3.1/builder-model-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/builder-test-api/2.3.1/builder-test-api-2.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdklib/25.3.1/sdklib-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/sdk-common/25.3.1/sdk-common-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/common/25.3.1/common-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/build/manifest-merger/25.3.1/manifest-merger-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/ddms/ddmlib/25.3.1/ddmlib-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jack/jack-api/0.13.0/jack-api-0.13.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/jill/jill-api/0.10.0/jill-api-0.10.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.0/protos-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.0/shared-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.0/tracker-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/protos/25.3.1/protos-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/shared/25.3.1/shared-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/analytics-library/tracker/25.3.1/tracker-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/squareup/javawriter/2.5.0/javawriter-2.5.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcpkix-jdk15on/1.48/bcpkix-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/bouncycastle/bcprov-jdk15on/1.48/bcprov-jdk15on-1.48.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-tree/5.0.4/asm-tree-5.0.4.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.0/lint-checks-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-checks/25.3.1/lint-checks-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/guava/guava/18.0/guava-18.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.0/baseLibrary-2.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/databinding/baseLibrary/2.3.1/baseLibrary-2.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/antlr/antlr4/4.5.3/antlr4-4.5.3.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-io/commons-io/2.4/commons-io-2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/googlecode/juniversalchardet/juniversalchardet/1.0.3/juniversalchardet-1.0.3.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.0/annotations-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/annotations/25.3.1/annotations-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/proguard/proguard-base/5.3.2/proguard-base-5.3.2.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-debug-all/5.0.1/asm-debug-all-5.0.1.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.0/layoutlib-api-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.0/dvlib-25.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.0/repository-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/layoutlib/layoutlib-api/25.3.1/layoutlib-api-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/dvlib/25.3.1/dvlib-25.3.1.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/repository/25.3.1/repository-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/apache/httpcomponents/httpmime/4.1/httpmime-4.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/net/sf/kxml/kxml2/2.3.0/kxml2-2.3.0.jar" />
-                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.0/lint-api-25.3.0.jar" />
+                            <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/android/tools/lint/lint-api/25.3.1/lint-api-25.3.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/org/ow2/asm/asm-analysis/5.0.4/asm-analysis-5.0.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
@@ -1062,13 +1783,18 @@
         <option value="$PROJECT_DIR$/src/DecodeThread/DispalyData.java" />
         <option value="$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java" />
         <option value="$PROJECT_DIR$/src/DecodeThread/ProcessLine.java" />
-        <option value="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" />
         <option value="$PROJECT_DIR$/src/mathTools/Status.java" />
-        <option value="$PROJECT_DIR$/src/DecodeThread/SharedData.java" />
         <option value="$PROJECT_DIR$/src/audiorecordUI/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/mathTools/_math.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/src/DecodeThread/DisplayLine.java" />
+        <option value="$PROJECT_DIR$/src/DecodeThread/SharedData.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/src/audiorecordUI/OscilloGraph.java" />
+        <option value="$PROJECT_DIR$/src/DecodeThread/LinkedBlockingList.java" />
+        <option value="$PROJECT_DIR$/src/audiorecordUI/DisplayWaveFormLine.java" />
+        <option value="$PROJECT_DIR$/src/DecodeThread/ArrayPool.java" />
+        <option value="$PROJECT_DIR$/src/DecodeThread/SharedData2.java" />
+        <option value="$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java" />
       </list>
     </option>
   </component>
@@ -1103,6 +1829,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1121,12 +1848,43 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AudioRecord" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DecodeThread" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1134,7 +1892,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.sdk.path" value="E:/android-sdk-windows" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AudioRecorderForMp3" />
-    <property name="device.picker.selection" value="4a0cd82c" />
+    <property name="device.picker.selection" value="69ecd856" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlEditorPanel.SHOW" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="271" />
@@ -1153,6 +1911,12 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="968" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="AllocationView.GroupBy" value="Group by Method" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\EclipseWorkSpace\AudioRecord\src\DecodeThread" />
+    </key>
   </component>
   <component name="RunManager" selected="Android App.AudioRecord">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -1226,6 +1990,54 @@
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1488,29 +2300,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06167401" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06167401" sideWeight="0.49573562" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.47014925" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14126807" sideWeight="0.50510204" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24779736" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.089207046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14096916" sideWeight="0.49489796" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.089207046" sideWeight="0.50852877" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2400881" sideWeight="0.4706823" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45044053" sideWeight="0.48400852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.089207046" sideWeight="0.4914712" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.090618335" sideWeight="0.6281113" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.6106409" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.090618335" sideWeight="0.37188873" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22246696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5154185" sideWeight="0.48507464" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14605543" sideWeight="0.38935912" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1522,8 +2335,25 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1543,7 +2373,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="broadcast-encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="broadcast-encryption" />
+    <MESSAGE value="unlimeted_length(beta)" />
+    <option name="LAST_COMMIT_MESSAGE" value="unlimeted_length(beta)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1553,148 +2384,24 @@
           <line>38</line>
           <properties />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DecodeThread/DispalyData.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DecodeThread/ArrayPool.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-          <folding>
-            <element signature="e#4579#4580#0" expanded="false" />
-            <element signature="e#4616#4617#0" expanded="false" />
-            <marker date="1489475732934" expanded="false" signature="31:49" ph="..." />
-            <marker date="1489475732934" expanded="true" signature="4292:4539" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2889#2890#0" expanded="false" />
-            <element signature="e#2914#2915#0" expanded="false" />
-            <marker date="1489475732936" expanded="true" signature="2398:2851" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/ProcessLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2816">
-          <caret line="401" column="28" selection-start-line="401" selection-start-column="28" selection-end-line="401" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="15" column="28" selection-start-line="14" selection-start-column="4" selection-end-line="15" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/ProcessLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="126" column="37" selection-start-line="126" selection-start-column="37" selection-end-line="126" selection-end-column="37" />
-          <folding>
-            <element signature="e#4579#4580#0" expanded="false" />
-            <element signature="e#4616#4617#0" expanded="false" />
-            <marker date="1489475732934" expanded="false" signature="31:49" ph="..." />
-            <marker date="1489475732934" expanded="true" signature="4292:4539" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2889#2890#0" expanded="false" />
-            <element signature="e#2914#2915#0" expanded="false" />
-            <marker date="1489475732936" expanded="true" signature="2398:2851" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1408">
-          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
@@ -1738,7 +2445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1769,7 +2475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1800,7 +2505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,7 +2535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1856,13 +2559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/DisplayWaveFormLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/android-sdk-windows/sources/android-21/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -1884,22 +2580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DispalyData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/android-sdk-windows/sources/android-21/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
@@ -1914,14 +2594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/SharedData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DecodeThread/CalibrationLine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
@@ -1930,62 +2602,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-400">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DecodeThread/ProcessLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2889#2890#0" expanded="false" />
-            <element signature="e#2914#2915#0" expanded="false" />
-            <marker date="1489475732936" expanded="true" signature="2398:2851" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-          <folding>
-            <element signature="e#4579#4580#0" expanded="false" />
-            <element signature="e#4616#4617#0" expanded="false" />
-            <marker date="1489475732934" expanded="false" signature="31:49" ph="..." />
-            <marker date="1489475732934" expanded="true" signature="4292:4539" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/ProcessLine.java" />
     <entry file="file://$PROJECT_DIR$/src/DecodeThread/DataExtractionLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
+        <state relative-caret-position="16">
           <caret line="270" column="49" selection-start-line="270" selection-start-column="49" selection-end-line="270" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DecodeThread/DisplayLine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        <state relative-caret-position="320">
+          <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/DispalyData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="25" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1552">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4579#4580#0" expanded="false" />
+            <element signature="e#4616#4617#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="258" column="11" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="148" column="30" selection-start-line="148" selection-start-column="30" selection-end-line="148" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/java/util/concurrent/LinkedBlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="187" column="5" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/SharedData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="method#takeRaw#0;class#SharedData#0" expanded="false" />
+            <element signature="method#displayInfo#0;class#SharedData#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_11.39.alloc">
+      <provider selected="true" editor-type-id="capture-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_11.52.alloc">
+      <provider selected="true" editor-type-id="capture-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/android/graphics/Bitmap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="201" column="16" selection-start-line="201" selection-start-column="16" selection-end-line="201" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/captures/com.example.audiorecord_2017.04.06_15.40.alloc">
+      <provider selected="true" editor-type-id="capture-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="817" column="0" selection-start-line="817" selection-start-column="0" selection-end-line="817" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/android/graphics/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/android-sdk-windows/sources/android-17/java/util/concurrent/atomic/AtomicInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <folding>
+            <element signature="e#1791#1792#0" expanded="false" />
+            <element signature="e#1819#1820#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/LinkedBlockingList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="28" column="55" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/ArrayPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/OscilloGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/DisplayWaveFormLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mathTools/_math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DecodeThread/SharedData2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="e#286#307#0" expanded="true" />
+            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#1800#1801#0" expanded="true" />
+            <marker date="1491479967785" expanded="false" signature="2011:2240" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/audiorecordUI/Saudioclient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="227" column="5" selection-start-line="227" selection-start-column="5" selection-end-line="227" selection-end-column="5" />
           <folding />
         </state>
       </provider>

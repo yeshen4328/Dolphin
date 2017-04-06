@@ -1,4 +1,7 @@
 package audiorecordUI;
+import DecodeThread.ArrayPool;
+import DecodeThread.LinkedBlockingList;
+import DecodeThread.SharedData2;
 import io.CustomStream;
 
 import java.io.BufferedInputStream;
@@ -38,22 +41,25 @@ public class Saudioclient extends Thread {
     private static final String TXTAUDIONAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.txt";
     private static final String RAWAUDIONAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.raw";
     private static final String MP3AUDIONAME = Environment.getExternalStorageDirectory().getAbsolutePath() + "/data.mp3";
-    public short[] audioData;
+
     public Complex[] data_time;
     SharedData share;
+	SharedData2 shareForWrite;
     OscilloGraph og = null;
     Handler mHandler;
     SurfaceView sfv = null;
+    ArrayPool arrayPool;
+	public short[] audioData;
+
     public Saudioclient(Handler mhandler)
     {
     	this.mHandler = mhandler;
     }
     public void init()
     {
-    	bufferSizeInBytes =  AudioRecord.getMinBufferSize(sampleRateInHz, channelConfig, audioFormat);	   
-    	audioData = new short[bufferSizeInBytes]; 
+    	bufferSizeInBytes =  AudioRecord.getMinBufferSize(sampleRateInHz, channelConfig, audioFormat);
     	m_in_rec = new AudioRecord(audioSource, sampleRateInHz, channelConfig, audioFormat, bufferSizeInBytes);
-    	
+        arrayPool = new ArrayPool(10, bufferSizeInBytes);
     }
     public void startRecord(int func, SurfaceView sfv)
     {  
@@ -61,10 +67,12 @@ public class Saudioclient extends Thread {
     	m_in_rec.startRecording();   
     	og = new OscilloGraph(sfv);
 	    share = new SharedData(mHandler);
+		shareForWrite = new SharedData2(mHandler);
 	    if(func == 1)//录音写入文件
 	    {  	
-	    	new Thread(new AudioRecordThread()).start(); 
+	    	new Thread(new AudioRecordThread()).start();
 	    	new Thread(new WriteToFile()).start();
+
 	    }
 	    else if(func == 2)//本地解码
 	    {
@@ -89,6 +97,7 @@ public class Saudioclient extends Thread {
         {  
             System.out.println("stopRecord");  
             share.setFinish(true);
+			shareForWrite.setFinish(true);
             og.setFinish(true);
             m_in_rec.stop();  
             m_in_rec.release();
@@ -110,16 +119,17 @@ public class Saudioclient extends Thread {
 				e.printStackTrace();
 			}
 			
-			while(!share.isEmpty() || !share.isFinish())
+			while(!shareForWrite.isEmpty() || !shareForWrite.isFinish())
 			{			
-				short[] data = share.takeRaw();
-				for(int i = 0; i < data.length; i++)
+				ArrayPool.ShortData data = shareForWrite.takeRaw();
+				for(int i = 0; i < data.size; i++)
 					try {
-							dos.writeShort(data[i]);
+							dos.writeShort(data.data[i]);
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
+                arrayPool.returnObj(data);
 			}
 			try {
 					dos.flush();
@@ -128,34 +138,92 @@ public class Saudioclient extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			share.setStatus(Status.WRITING_FINISH);
+
+			shareForWrite.setStatus(Status.WRITING_FINISH);
 		}	
     }
+	/*public class WriteToFileWithNoPool implements Runnable
+	{
+		@Override
+		public void run()
+		{
+			// TODO Auto-generated method stub
+			DataOutputStream dos = null;
+			try {
+				dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(RAWAUDIONAME)));
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			while(!share.isEmpty() || !share.isFinish())
+			{
+				short[] data = share.takeRaw();
+				for(int i = 0; i < data.length; i++)
+					try {
+						dos.writeShort(data[i]);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+			}
+			try {
+				dos.flush();
+				dos.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			share.setStatus(Status.WRITING_FINISH);
+		}
+	}*/
     public class AudioRecordThread implements Runnable
     {
     	 @Override  
-         public void run() {   
-    		 new Thread(new DisplayWaveFormLine(og)).start();		
-             int readsize = 0; 
-             short[] dataInShort = null;
-             //DisplayWaveForm dis = new DisplayWaveForm(sfv);
-             while (!share.isFinish())
-             {  
-                 readsize = m_in_rec.read(audioData, 0, bufferSizeInBytes);  
+         public void run() {
+			 DisplayWaveFormLine soundWav = new DisplayWaveFormLine(og);
+    		 new Thread(soundWav).start();
+             int readsize = 0;
+             while (!shareForWrite.isFinish())
+             {
+                 ArrayPool.ShortData audioData = arrayPool.borrrowObj();
+                 readsize = m_in_rec.read(audioData.data, 0, bufferSizeInBytes);
                  Log.i("TAG",Integer.toString(readsize) + " "+Integer.toString(bufferSizeInBytes));
                  if(readsize > 0)
                  {
-                	dataInShort  = _math.copyByIndex(audioData, 0, readsize - 1);
-                	og.put(dataInShort); 
-                 	share.put(dataInShort.clone()); 
+					//audioData  = _math.copyByIndex(audioData, 0, readsize - 1);
+					 audioData.size = readsize;
+                	 og.put(ArrayPool.max(audioData));
+					 shareForWrite.put(audioData);
                  	//dis.run(dataInShort);
                  }
-             }        
+             }
          }
     }
-    
-    
+
+	/*public class AudioRecordThreadWithNoPool implements Runnable
+	{
+		@Override
+		public void run() {
+			new Thread(new DisplayWaveFormLine(og)).start();
+			int readsize = 0;
+			short[] dataInShort = null;
+			//DisplayWaveForm dis = new DisplayWaveForm(sfv);
+			while (!share.isFinish())
+			{
+				readsize = m_in_rec.read(audioData, 0, bufferSizeInBytes);
+				Log.i("TAG",Integer.toString(readsize) + " "+Integer.toString(bufferSizeInBytes));
+				if(readsize > 0)
+				{
+					dataInShort  = _math.copyByIndex(audioData, 0, readsize - 1);
+					og.put(_math.max(dataInShort));
+					share.put(dataInShort.clone());
+					//dis.run(dataInShort);
+				}
+			}
+		}
+	}*/
     public class AudioRead implements Runnable
     {
 		@Override
@@ -165,7 +233,7 @@ public class Saudioclient extends Thread {
 			DataInputStream dis = null;
 			try {
 					 dis = new DataInputStream(new BufferedInputStream(new FileInputStream(RAWAUDIONAME)));
-					 int size = dis.available();					 
+					 int size = dis.available();
 					 for(int i = 0; i < size/1024; i++)
 					 {
 						 short[] data = new short[1024];

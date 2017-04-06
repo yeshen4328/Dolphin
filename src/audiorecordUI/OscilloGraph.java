@@ -2,6 +2,7 @@ package audiorecordUI;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
+import DecodeThread.LinkedBlockingList;
 import mathTools._math;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -9,15 +10,14 @@ import android.view.SurfaceView;
 
 public class OscilloGraph {
 	int rateX = 700;
-	
-	LinkedBlockingQueue<short[]> dataQueue = new LinkedBlockingQueue<short[]>();
+	LinkedBlockingList dataQueue = new LinkedBlockingList();
 	SurfaceView sfv = null;
 	private boolean isFinish = false;
 	public OscilloGraph(SurfaceView sfv) {
 		// TODO Auto-generated constructor stub
 		this.sfv = sfv;
 	}
-	public void put(short[] data)//将录音的数据加入到队列中
+	public void put(short data)//将录音的数据加入到队列中
 		{
 			try {					
 					dataQueue.put(data);
@@ -44,16 +44,16 @@ public class OscilloGraph {
 	}
 	public short take()
 	{
-		short[] data = null;
+		short data = 0;
 		short temp = 0;
 		try {
 				data = dataQueue.take();						
-				temp = _math.max(data);
+
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
-		return temp;
+		return data;
 	}
 	public boolean isEmpty()
 	{

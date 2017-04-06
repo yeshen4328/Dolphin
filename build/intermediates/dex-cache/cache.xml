@@ -2,40 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="E:\EclipseWorkSpace\AudioRecord\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2e50a2a1db49776480b2f83f8a6cb2aaeba33d8f">
-        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_409dd2e774cdffd0c62d21ab9afb09a483251736\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
+        is-multidex="false"
         jar="E:\EclipseWorkSpace\AudioRecord\libs\android-support-v4.jar"
-        jumboMode="true"
+        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="ded9acc6a9792b8f1afc470f0c9cd36d178914cd">
-        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\EclipseWorkSpace\AudioRecord\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_67fb74d658c92914f3f3dbfd037b394b721988ce\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\EclipseWorkSpace\AudioRecord\libs\android-support-v4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.3"
-        sha1="ded9acc6a9792b8f1afc470f0c9cd36d178914cd">
-        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275\classes.dex" />
+        <dex dex="E:\EclipseWorkSpace\AudioRecord\build\intermediates\pre-dexed\debug\android-support-v4_f6fd4f5b44c1e2f3522b841f0b67023e7051d275.jar" />
     </item>
 
 </items>
